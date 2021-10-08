@@ -1,0 +1,24 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/*
+                                Tipografía
+*/
+.contact-form{
+    font-size: 25px;
+}
+
+.contact-form__h2{
+    font-size: 2em;  /* Seria igual a 100px y es el tamaño de la letra */
+    font-family: Arial, Helvetica, sans-serif; 
+            /* font-family, es la tipografia/
+            las comas es porque si no se encuentra una tipografia, pasa a la segunda */
+
+    line-height: 2; /* Es el tamaño que ocupa la letra, si es uno es el tamaño original  */
+    font-weight: 400; /* Cambia el grosor de la letra */
+    color:blue;  /* Tambian podemos buscar tipografias en Google Fonts */
+    /*
+    font-stretch: normal;  segun dalto, son inutiles 
+    font-variant: small-caps;*/
+}

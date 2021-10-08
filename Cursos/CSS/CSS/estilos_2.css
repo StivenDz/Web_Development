@@ -1,0 +1,59 @@
+/*
+
+                                        Especificidad - Prioridades en CSS
+
+{!Important}
+
+{Identificadores = ID}
+
+{
+    Clases
+    Pseudo-Clases
+    Atributos
+}
+
+{
+    Elementos
+    Pseudo-Elementos
+}
+
+
+*/
+
+/*
+
+    !Important
+
+    h1{
+        color:grey !important;    // El !important es el lider de todos, predomina sobre todos
+    }
+
+*/
+
+
+/*
+        El estilo en linea predomina sobre el ID, las clases, los elementos y sus grupos,
+        es aquel que se realiza en el codigo html,
+        <h1 style="color:brown;">Lorem5 </h1>               
+*/
+
+#color_orange{
+    color: orange;     /* El ID predomina sobre las clases, elementos y atributos, y a sus agrupaciones */
+}
+
+.color_red{
+    color:red;         /* por clase*/
+}
+
+h1{                     
+    color:blue;        /* Por elemento */
+}
+
+[atributo="color_blue"]{   /* la clase y el atributo estan en el mismo nivel, por ende queda el ultimo ejecutado */
+    color:blue;
+}
+
+h1{
+    color:grey !important; /*La frase !importan es la que le gana a todos, no importa si es una clase o un elemento etc*/
+}
+

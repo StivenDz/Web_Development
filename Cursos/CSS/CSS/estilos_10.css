@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+/*                                  Pseudo - Elementos                                */
+/*  
+
+::first-line        | block      /no funciona en inline, en todos los demas displays si
+::first-letter      | block      
+::placeholder       | 
+::after             | Hijos - content (necesario) - inline
+::before            | Hijos - content (necesario) - inline
+::selection         | 
+
+*/ 
+
+
+.texto::first-line{  /*   la primera linea  */
+    color: blue;    /* Será azul respetando el responsive */
+    font-size: 3em;     /* y tendra un tamaño mayor a las demas */
+}
+
+.texto2::first-letter{
+    color:blue;         /* selecciona la primera letra */
+    font-size: 4em;     /*   le aplicamos el color azul y le aumentamos el tamaño   */
+}
+/* Estas dos propiedades formam parte del dome, se podrian seleccionar tambien*/
+
+/*  los elementos que requieren de la etiqueta content no forman parte del dome  */
+
+
+form{
+    margin: 100px auto;
+    display: block;
+    padding: 20px 10px;
+    background-color: #555;
+    width: 90%;
+}
+
+.input-{
+    padding: 6px;
+    width: 100%;
+    transition: all 1s
+}
+
+.input-::placeholder{
+    color: gray;    /* se utiliza mas que todo para los inputs de type="text" */
+}
+
+.texto3{
+    width: 700px;
+    margin: 50px auto;
+    padding: 15px;
+}
+
+.texto3::selection{
+    background: black;  /* el elemento que seleccionas, el fondo se vuelve negro y las letras blancas */
+    color: white;/*se comporta como un elemento en linea, no adquiere dimensiones*/
+}
+
+/*------------------------------------------------------------------------------------------------------------*/
+
+/*                                          ::Before    &        ::after   
+                                             Antes                Despues                                     */
+form{
+    text-align: center;
+}
+.b{
+    padding: 6px;
+    width: 100%;
+}
+
+.b::before{
+    content: "me suscribí"; /* funciona con elementos en linea y tambien en block*/
+    color: #fff;
+}
+
+.b::after{
+    content: "todo tendencias";
+    color: rgb(49, 40, 40);
+}
+
+
+/*                                      Pseudo - Clases                          */
+/*                        element:hover  se puede hacer en todo tipo de display                                                                         */
+.caja1{
+    height: 200px;
+    width: 200px;
+    background: rgb(235, 230, 230);
+    margin: 50px auto;
+    text-align: center;
+    transition: all 2s;
+    cursor: pointer;
+}
+
+.caja1:hover{
+    background: black;
+    color: white;
+    line-height: 200px;
+}
+
+/*                                  :link        :visited*/
+
+.links{
+    display: block;
+    width: 80%;
+    margin: 20px auto 70px;
+    background: #555;
+}
+
+.links a{
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    padding:10px;
+    margin: 2px;
+}
+
+.links a:link{
+    color: #fff;
+}
+
+.links a:visited{
+    color: black;
+    background-color: #fff;
+}
+
+/*                                   .element:active                                                           */
+
+.box{
+    width: 250px;
+    height: 250px;
+    background: red;
+    margin: 75px;
+    transition: width .9s, height .4s, background .9s;
+}
+
+.box:active{        /*   mentener presionado el cuadro .box    */
+    background:blue;/*cambia a azul y aumenta el ancho*/
+    width: 600px;
+    height: 450px;
+}
+
+
+/*                                 .element:focus                     */
+
+.input--{
+    display: block;
+    width: 70%;
+    margin: 100px auto ;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.input--:focus{
+    background: #555;
+    color: white;
+}
+
+.box2{
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.box2 b:lang(en){
+    text-shadow: 5px 1px 10px #555;
+}
+
+
+
+
+/*                      Objet-Fit:contain/cover/none/scale-down                     */
+/*hace que las resoluciones de la imagen se ajusten al contenido   */
+
+.box3{
+    margin: 25px auto;
+    width: 300px;
+    height: 400px;
+    
+}
+
+.box3 .img1{
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    object-fit: contain;
+}
+.box3 .img2{
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    object-fit: cover; /*se ajusta el contenedor y recorta el tamaño*/
+    object-position: left;/*se muestra mas la parte izquierda*/
+}
+.box3 .img3{
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    object-fit: none;/*usa las pripiedades por defecto, el tamaño real de la imagen, si el contenedor es mas pequeño que la imagen, entonces aparecera un pedazo*/
+}
+.box3 .img4{
+    height: 100%;
+    width: 100%;
+    border: 2px solid red;
+    object-fit: scale-down;/*se queda con la mejor propiedad entre las otras tres, se queda con la pripedad que tenga la resolution mas pequeña, en este caso contain*/
+}
+
+/*                                              Cursor:*/
+
+.cursor{
+    margin: 50px;
+    text-align: center;
+}
+
+.cursor p{
+    margin-bottom: 15px;
+    background: rgb(148, 148, 148);
+}
+
+.cursor p:hover{
+    background: rgb(0, 0, 0);
+    color: #fff;
+}
+
+.alias {cursor: alias;}
+.all-scroll {cursor: all-scroll;}
+.auto {cursor: auto;}
+.cell {cursor: cell;}
+.context-menu {cursor: context-menu;}
+.col-resize {cursor: col-resize;}
+.copy {cursor: copy;}
+.crosshair {cursor: crosshair;}
+.default {cursor: default;}
+.e-resize {cursor: e-resize;}
+.ew-resize {cursor: ew-resize;}
+.grab {cursor: -webkit-grab; cursor: grab;}
+.grabbing {cursor: -webkit-grabbing; cursor: grabbing;}
+.help {cursor: help;}
+.move {cursor: move;}
+.n-resize {cursor: n-resize;}
+.ne-resize {cursor: ne-resize;}
+.nesw-resize {cursor: nesw-resize;}
+.ns-resize {cursor: ns-resize;}
+.nw-resize {cursor: nw-resize;}
+.nwse-resize {cursor: nwse-resize;}
+.no-drop {cursor: no-drop;}
+.none {cursor: none;}
+.not-allowed {cursor: not-allowed;}
+.pointer {cursor: pointer;}
+.progress {cursor: progress;}
+.row-resize {cursor: row-resize;}
+.s-resize {cursor: s-resize;}
+.se-resize {cursor: se-resize;}
+.sw-resize {cursor: sw-resize;}
+.text {cursor: text;}
+.url {cursor: url(myBall.cur),auto;}
+.w-resize {cursor: w-resize;}
+.wait {cursor: wait;}
+.zoom-in {cursor: zoom-in;}
+.zoom-out {cursor: zoom-out;}
+
+

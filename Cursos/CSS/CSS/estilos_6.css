@@ -1,0 +1,37 @@
+/*
+                    Normalize
+*/
+
+/*
+        Es una forma de resetear los estilos de los navegadores navegadores
+*/
+
+/*
+                    Cajas
+
+    Existen solo 2 tipos de cajas
+    -en linea : ocupa lo que contenga el elemento
+    -en bloque: ocupa todo el ancho del container que lo contenga
+*/
+
+*{
+    font-family: 'Lobster',cursive;
+    font-weight: 100;
+    font-size: 30px;
+}
+    /* Como convertir una caja de bloque en caja de linea */
+h2{
+    display: inline;  /* Para modificar el tamaño de la caja
+                      hacer que el h2 que es una caja en bloque se comporte
+                      como uno en linea  */
+    height: 400px;
+    width: 190px;
+
+    /*  a los elementos en linea, nos se les puede agregar heigth ni width/ es en linea, porque lo convertimos   */
+    
+}
+
+p{
+    height: 400px;
+    width: 190;
+}

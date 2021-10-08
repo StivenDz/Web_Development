@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--  ! + tab == DOCTYPE html y su base-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Curso Completo| Stiven Dz</title>
+    </head>
+    <body>
+        <!-- Titulos-->
+        <p>
+            <h1></h1>
+            <h2></h2>
+            <h3></h3>
+            <h4></h4>
+            <h5></h5>
+            <h6></h6>
+        </p>
+        <!-- Formato de texto-->
+        <p>
+            <b>Negrita</b><br>
+            <strong>Texto importante en negrita</strong><br>
+            <i>italica o cursiva</i><br>
+            <em>Enfatizar (cursiva)</em><br>
+            <small>Texto pequeño</small><br>
+            <mark>resaltador</mark><br>
+            <del>Texto eliminado, con raya en la mitad</del><br>
+            <ins>Subrayado</ins><br>
+            <b>H<sub>2</sub>O</b> =Subindice<br>
+            Uribe<sup>Paraco</sup>largate =SUper indice<br>
+
+        <!-- Acciones adicionales -->   
+
+            <br>Completa la linea
+            <hr>Traza una linea horizontal de extremo a extremo
+        </p>
+        <!-- Links-->
+        <p>
+            <a href="#Ruta del link" target="_BLANK">Haz click</a>  link que abre en otra pagina<br>
+            
+        </p>
+        <!-- Lista con puntitos-->
+        <ul>
+            <h2>Compras realizadas hoy</h2>
+            <li><b>10 lb</b> de Papa</li>
+            <li><b>5 lb</b> de Yuca</li>
+            <li><b>10 lb</b> de Arroz</li>
+            <li><b>5 lb</b> de Cheese</li>
+            <li><b>2 lb</b> de Platano verde</li>
+            <li><b>5 Lt</b> de Cocacola</li>
+        </ul>
+        <!-- Lista con enumeracion-->
+        <ol>
+            <h2>Compras realizadas hoy</h2>
+            <li><b>10 lb</b> de Papa</li>
+            <li><b>5 lb</b> de Yuca</li>
+            <li><b>10 lb</b> de Arroz</li>
+            <li><b>5 lb</b> de Cheese</li>
+            <li><b>2 lb</b> de Platano verde</li>
+            <li><b>5 Lt</b> de Cocacola</li>
+        </ol>
+        <!-- Separar contenido con <div></div>-->
+        <div>
+            <h1>Compras del mes</h1>
+            <p><b>Presupuesto</b><del>2000 E</del></p><br>
+        </div>
+        <!-- Multimedia-->
+        <div>
+            <section>
+                
+                <img src="#Ruta/link de la imagen de da imagen" alt="Stivcen Diaz" title="Programador"> title = cuando nos posicionemos encima de la imagen muestra el texto Programador
+                <br>alt = texto alternativo en caso de que no se muestre la img
+                que es importante para el C.E.O<br><br><br>
+
+                <video src="#Ruta/link del video" controls></video><br><br>
+                <audio src="Ruta/link del audio" controls></audio><br><br>
+                
+            </section> 
+        </div>
+        <!-- Generar formularios con <form></form>-->
+        <div>
+            <p>required = Este atributo no permite enviar la informacion si no se completa este espacio.</p><br>
+            <form method="POST"> <!-- Se envia al servidor -->
+                <p>Tipo texto con value</p>
+                <input type="text" name="name" value=" "><br><br> 
+                <p> Tipo Password </p>
+                <input type="password" name="password"><br><br> 
+                <p>Tipo number with required  </p>
+                <input type="number" required=" " name="year"> <br><br> 
+                <p>  Tipo Email</p>
+                <input type="email" name="mail"><br><br> 
+                <p> Tipo color </p>
+                <input type="color" name="color"><br><br> 
+                <p>Tipo range  </p>
+                <input type="range" name="age" min="" max=""><br><br>
+                <p> Tipo date </p> 
+                <input type="date" name="date"><br><br> 
+                <p> Tipo time </p>
+                <input type="time" name="hour"><br><br> 
+                <p>Tipo button  </p>
+                <input type="button" name="button" value="Aceptar"><br><br> 
+                <p> Tipo submit </p>
+                <input type="submit" name="done"><br><br><br>
+            </form>
+        </div>
+        <div>
+            <textarea>Es un texto que funciona como un input</textarea><br><br>
+            <textarea readonly =" ">ReadOnly</textarea><br>
+        </div>
+        <div>
+        <!-- Metadatos -->
+            <!-- Es una info que describe datos u otra info -->
+            <!--- WWW significa (World wide web)-->
+
+                <!--
+
+                    <meta charset="UTF-8">
+                    description : sirve para que la pagina nos acepte
+                    los cacarteres universales
+
+
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    description : compatible con algunos exploradores
+                    I Explorer / Edge/ Chrome
+
+                    
+                    <meta name="keywords" content="neveras,estufas,televisores,refigerador,LG,HACEB,Acer">
+                    description : palabras claves para que cuando un usuario busque algo
+                    y ese algo se encuentra en nuestro content, le aparezca nuestra pagina de primero
+
+                    
+                    <meta name="description" content="Sercol S.A es una compañia 
+                    destinada a la venta de los mejores lectrodomesticos en Colombia">
+                    description : descripcion de nuestra pagina web, entre 70 y 140 caracteres
+
+                    
+                    <meta name="author" content="Stiven Diaz">
+                    description : nombre del autor
+
+                    
+                    <meta name="copyright" content="Facebook Inc.">
+                    description : solo si nuestro contenido contine CopyRight
+
+                    
+                    <meta name="robots" content="index/noindex"> 
+                    description : si buscan nuestra pagina. aparecerá /no aparecerá
+
+                    
+                    <meta name="robots" content="follow/nofollow">
+                    description : que tenemos que darle importancia en el C.E.O
+
+                    
+
+
+                -->
+
+
+
+        </div>
+        
+        <!-- HTML Semantico 
+            <header></header> = Es lo primero que va dentro del body
+            encabezado de la pagina, la parte suepriror del todo
+            normalmente contiene una etiqueta llamada,
+
+            <nav></nav> que sirve para crear el menu de navegacion
+            la seccion de acerca de nosotros, registrarse, barra de navegacion, etc
+            nos envia a distintas partes de la pagina, acerca de, privacidad,etc
+
+            <footer></footer> es el pie de pagina
+            lo que va abajo del todo
+        
+        -->
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="C:\Users\ANGIELY DIAZ\Desktop\VSC (HTML, CSS y JavaScript\Proyectos\HTML\Holberton School\index.html " target="_BLANK">Visitar La Escuela</a></li>
+                    <li><a href="Micuenta.html ">Mi Cuenta</a> </li>
+                    <li><a href="AboutUs.html ">Sobre Nosotros</a></li>
+                </ul>
+                <!--Tambien se puede asi:
+                    <body>
+                        <header>
+                            <nav>
+                                <a href="index.html">Inicio</a>
+                                |
+                                <a href="tweets.html">Ver tweets</a>
+                                |
+                                <a href="#">Acerca de</a>
+                                |
+                                <a href="#">Proceso de admision</a>
+                                |
+                                <a href="#">Contacto</a>
+
+                            </nav>
+                        </header>
+                    </body>
+                -->
+            </nav>
+        </header>
+        <article><!--Sirve para crear un artuculo-->
+            <section><!--Sirve para dividir un artuculo en secciones-->
+                <h1>
+                    Todo Tendencias alcanzó los <b>10.000</b> Suscriptores en <b>Youtube</b>
+                </h1>
+                <h2>
+                    El canal de Youtube Acerca de Ciencias y Tecnología de Lucas Dalto alcanzó
+                    los 10.000 Suscriptores<br>
+                    <b>10.000</b> Personas Aprendiendo
+                </h2>
+                
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet enim commodi obcaecati.
+                    Voluptas voluptatem, molestias laudantium veniam tempore suscipit odit?<br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ratione, at aspernatur earum labore commodi quasi, aliquid neque eveniet obcaecati magnam, quas laborum repellendus natus qui ad voluptatum nemo eaque?
+                    Praesentium mollitia itaque soluta sapiente magnam quae impedit optio. Architecto.<br>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Ab velit eum labore recusandae optio quidem aut consequuntur ipsum unde illum maxime quas ad numquam consectetur perferendis tempore quos sed maiores,
+                    rem dignissimos culpa accusantium sequi modi? Aut praesentium aliquam aliquid eius accusamus sed, itaque excepturi,
+                    laborum voluptas tempora dolorum nulla.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut temporibus ullam facere. Adipisci voluptatum iure asperiores eaque voluptate facilis fuga quo, blanditiis repellendus repellat fugit aspernatur officia dolores non? Quod.
+                </p>
+                
+            </section>
+        </article>
+        <aside>
+            <h2>
+                Contenido Extra
+            </h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In repellat illo possimus atque officiis, corrupti, 
+                tenetur deserunt nulla dolorum expedita voluptas ea, illum natus. Sequi consectetur totam beatae quia optio voluptatem at recusandae voluptates natus eum deserunt fuga fugit, veniam asperiores modi? Vero tempore deserunt quo libero rerum quia 
+                ipsam beatae autem sit soluta, quidem repudiandae quisquam nam consequuntur facere est? Saepe suscipit, deleniti consequuntur assumenda deserunt optio natus sapiente. 
+                Quam dicta, doloribus odit possimus eveniet libero suscipit, corrupti maiores inventore fugit asperiores culpa enim 
+                distinctio deserunt dolor reiciendis error voluptatem quo aut rerum sunt quae, aspernatur quis ea. Cum!</p>
+        </aside>
+        <footer>
+            <hr>
+            <h4>copyright | Todos los derechos reservados</h4>
+            <p>siguenos en nuestras redes sociales</p>
+            <a href=" #">Instagram</a>
+            |
+            <a href=" #">Facebook</a>
+            |
+            <a href=" #">Youtube</a>
+        </footer>
+        <!-- TABLAS } ya no se usan casi 
+            
+            <table border = "1px"> Se hace mejor en CSS
+                <tr>
+                    <td><b>Nombre</b></td>
+                    <td><b>Apellido</b></td>
+                    <td><b>Canal</b></td>
+                    <td><b>Followers</b></td>
+                </tr>
+                <tr>
+                    <td>Stiven</td>
+                    <td>Diaz</td>
+                    <td>Drums</td>
+                    <td>900.000</td>
+                </tr>
+                <tr>
+                    <td>Andres</td>
+                    <td>Hincapie</td>
+                    <td>Drummer</td>
+                    <td>200.000</td>
+                </tr>
+                <tr>
+                    <td>Lucas</td>
+                    <td>Dalto</td>
+                    <td>Todo Tendencias</td>
+                    <td>9.000</td>
+                </tr>
+            </table>
+
+            <center>
+                Sirve para centrar el contenido que contiene esta etiqueta
+                es mejor utilizar CSS
+            </center>
+        -->
+
+        <!--
+            ID and Iconos
+
+            <a href = "#codigo ">Haz click aqui para ir a el codigo</a>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aperiam sint asperiores distinctio earum obcaecati quis perferendis delectus, tempore quidem officiis soluta natus quasi assumenda iure ab provident, alias labore,
+                est perspiciatis maiores maxime dignissimos aliquam. Excepturi eos, nisi voluptate architecto repellat itaque nesciunt labore, incidunt commodi odio illo tenetur unde, veniam ad fugit facilis sunt pariatur quo. Cupiditate blanditiis quam dicta beatae et ducimus laboriosam non est enim 
+                ipsam, vel quae dolores at assumenda nesciunt quo aliquid, eligendi
+                doloribus esse labore ipsa provident dolore! Reiciendis facere autem eum fuga, culpa ex velit a, dolores tenetur aspernatur asperiores nostrum cumque ea explicabo quod similique alias provident dolorem dolore mollitia nemo molestias
+                assumenda iure illum? Atque dolore dolor sapiente est facilis libero quaerat repudiandae facere at perferendis beatae veritatis quas obcaecati non eligendi exercitationem omnis minus quis, possimus quasi ipsa? Beatae commodi, nemo adipisci modi velit mollitia facere.
+                Nesciunt tempore dolores explicabo at dolor! Unde recusandae illum ducimus veritatis provident distinctio ea quibusdam quia placeat commodi repudiandae, exercitationem natus, numquam totam corporis aut nihil maiores adipisci assumenda animi consectetur quos suscipit.
+                Hic odio laudantium reprehenderit doloribus ab soluta deleniti minima,
+                alias enim similique omnis accusantium? Illum minima perspiciatis perferendis possimus praesentium.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aperiam sint asperiores distinctio earum obcaecati quis perferendis delectus, tempore quidem officiis soluta natus quasi assumenda iure ab provident,
+                alias labore, est perspiciatis maiores maxime dignissimos aliquam. Excepturi eos, nisi voluptate architecto repellat itaque nesciunt labore, incidunt commodi odio illo tenetur unde, veniam ad fugit facilis sunt pariatur quo. 
+                Cupiditate blanditiis quam dicta beatae et ducimus laboriosam non est enim ipsam, vel quae dolores at assumenda nesciunt quo aliquid, eligendi doloribus esse labore ipsa provident dolore! Reiciendis facere autem eum fuga, culpa ex velit a, dolores tenetur aspernatur asperiores nostrum cumque ea explicabo quod similique alias provident dolorem dolore mollitia nemo molestias assumenda iure illum? Atque dolore dolor sapiente est facilis libero quaerat repudiandae facere at perferendis beatae veritatis
+                quas obcaecati non eligendi exercitationem omnis minus quis, possimus quasi ipsa? Beatae commodi, nemo adipisci modi velit mollitia facere. Nesciunt tempore dolores explicabo at dolor! Unde recusandae illum ducimus veritatis provident distinctio ea quibusdam quia placeat commodi repudiandae, exercitationem natus, numquam totam 
+                corporis aut nihil maiores adipisci assumenda animi consectetur quos suscipit. Hic odio laudantium reprehenderit doloribus ab soluta deleniti minima, alias enim similique omnis accusantium? Illum minima perspiciatis perferendis possimus praesentium.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aperiam sint asperiores distinctio earum obcaecati quis perferendis delectus, tempore quidem officiis soluta natus quasi assumenda iure ab provident,
+                alias labore, est perspiciatis maiores maxime dignissimos aliquam. Excepturi eos, nisi voluptate architecto repellat itaque nesciunt labore, incidunt commodi odio illo tenetur unde, veniam ad fugit facilis sunt pariatur quo. Cupiditate blanditiis quam dicta beatae et ducimus laboriosam non est enim ipsam, vel quae dolores 
+                at assumenda nesciunt quo aliquid, eligendi doloribus esse labore ipsa provident dolore! Reiciendis facere autem eum fuga, culpa ex velit a, dolores tenetur aspernatur asperiores nostrum cumque ea explicabo quod similique alias provident dolorem dolore mollitia nemo molestias assumenda iure illum? Atque dolore dolor sapiente est facilis libero quaerat repudiandae facere at perferendis beatae veritatis quas obcaecati non eligendi exercitationem omnis
+                minus quis, possimus quasi ipsa? Beatae commodi, nemo adipisci modi velit mollitia facere. Nesciunt tempore dolores explicabo at dolor! Unde recusandae illum ducimus veritatis provident distinctio ea quibusdam quia placeat commodi repudiandae, exercitationem natus, numquam totam corporis aut nihil maiores adipisci assumenda animi consectetur quos suscipit. Hic odio laudantium reprehenderit doloribus ab soluta deleniti minima, alias enim similique omnis accusantium? Illum minima perspiciatis perferendis possimus praesentium.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aperiam sint asperiores distinctio earum obcaecati quis perferendis delectus, tempore quidem officiis soluta natus quasi assumenda iure ab provident, alias labore,
+                est perspiciatis maiores maxime dignissimos aliquam. Excepturi eos, nisi voluptate architecto repellat itaque nesciunt labore, incidunt commodi odio illo tenetur unde, veniam ad fugit facilis sunt pariatur quo. Cupiditate blanditiis quam dicta beatae et ducimus
+                laboriosam non est enim ipsam, vel quae dolores at assumenda nesciunt quo aliquid, eligendi doloribus esse labore ipsa provident dolore! Reiciendis facere autem eum fuga, culpa ex velit a, dolores tenetur aspernatur asperiores nostrum cumque ea explicabo quod similique alias provident dolorem dolore mollitia nemo molestias assumenda iure illum? Atque dolore dolor sapiente est facilis libero quaerat repudiandae facere at perferendis beatae veritatis quas obcaecati non eligendi exercitationem omnis minus quis, possimus quasi ipsa? Beatae commodi, nemo adipisci modi velit mollitia facere. Nesciunt tempore dolores explicabo at dolor! Unde recusandae illum ducimus veritatis provident distinctio ea quibusdam quia placeat commodi repudiandae, exercitationem natus, numquam totam corporis aut nihil maiores adipisci assumenda animi consectetur quos suscipit. Hic odio laudantium reprehenderit doloribus ab soluta deleniti minima, alias enim similique omnis accusantium? Illum minima perspiciatis perferendis possimus praesentium.
+
+
+            </p>
+            <h2 id ="codigo">El codigo es: jasdjqwidjasd </h2>
+
+            ICONOS
+
+
+            <link rel="icon" href="Stiven.ico">
+            
+        -->
+    </body>
+</html>
