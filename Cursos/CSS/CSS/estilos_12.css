@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+/*  Display:flex
+
+eje y vertical se le llama (cross axis) es un shorthand (cross-start y cross-end , son direcciones)
+eje x horizontal se le llama (main axis) es un shorthand (main-start y main-end , son direcciones)
+
+*/
+/*
+.flex-container{
+    display:flex;
+    /*flex-direction:column ;*/
+    /*flex-direction: row-reverse;*/
+    /*flex-flow: column wrap;*/
+    /*flex-wrap: wrap;*/
+    /*flex-wrap: wrap-reverse;*/
+    /*flex-wrap: wrap-reverse;van hacia arriba*/
+    /*justify-content:space-around;es como un margin auto*/
+    /*justify-content:space-between;/*corta los espacios a los costados*/
+    /*justify-content: space-around;/*todas tienen el mismo margin pero ala lavez no, pero las que estan juntas es como si se les sumara la del lado*/
+    /*justify-content: space-evenly;/* aqui si todas tienen el mismo margin*/
+    /*height: 100vh;
+    align-items:center;/* coloca los items en el centro del contenedor*/
+    /*align-items:flex-end;/* coloca los items en la parte inferior del contenedor*/
+    /*align-content:baseline;*/
+    /*flex-wrap:wrap ;
+
+}*/
+/*
+
+flex-direction, se aplica a los containers
+propiedades: 
+    row=hilera, es la que viene por defecto
+    column=columna
+    row-reverse=hilera alreves, es como un espejo, no va a ir de derecha a izquierda sino de izquierda a derecha
+    column-reverse=lo mismo que row-reverse pero en column
+
+flex-wrap
+    wrap
+    nowrap
+    wrap-reverse
+
+flex-flow {combinacion de flex-direction y flex-wrap}
+    colum wrap
+
+justify-content
+    center
+    space-around
+    space-netween
+    space-evenly
+    (main axis)
+
+para el cross axis tenemos las sgtes
+
+Align-items
+    flex-start (se ajusta  la caja flexible a su contenido, si es que no tiene height el container)
+    center
+    flex-end
+    strech (propiedad por defecto/sino tiene height, el mismo se lo agrega hasta lo maximo)
+    baseline
+aling-content
+    para mas de una linea de items que son flex-items
+*/
+
+.flex-item{
+    background: #248;
+    color: #fff;
+    margin: 5px;
+    height: 120px;
+    min-width: 120px;
+    text-align: center;
+    
+}
+
+/*
+Propiedades de los items
+    align-self
+    flex-grow
+    flex-shrink
+    flex-basis
+    flex:flex-grow, flex shrink, flex-basis
+    order: (como el z-index, pero en el eje en elq ue apunta el ,main axis)
+*/
+
+.orange{
+    background:orange;
+    flex-basis: 200px;/*es como un width con prioridad*/
+    flex-shrink: 2;/*+ceder mas espacio*/
+    flex: 1 0 350px;
+    order: 4;/*es como un z-index pero en el eje en el que apunte el flex, el que tenga el valor mas grande irá en el final
+
+    si tenemos un flex-direction:column; 
+
+    la caja orange irá al final, a la derecha
+    */
+    flex-grow: 2;/*el espacio que sobra se le agraga al tamaño de esta caja mas que al green*/
+    /*el espacio que sobra se divide entre 3 y esta posee 2/3*/
+}
+
+.green{
+    background:green;
+    /*align-self: flex-end;*/
+    flex-grow: 1;/*el espacio que sobra se le agraga al tamaño de esta caja*/
+}
+
+
+/*                     Formulario Flex                 */
+body{
+    background: #000;
+}
+
+.flex-container{
+    display:flex;
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #333;
+    margin: 50px 50px;
+    border-radius: 10px;
+    transition: all 1s;
+    padding: 10px;
+    max-width: 1000px;
+}
+
+.form{
+    min-width:400px;
+    flex: 1;/*flex-grow*/
+    text-align:right;
+    padding: 30px;
+    order: 2;
+}
+
+.form__input:focus{
+    background: linear-gradient(to bottom,transparent,#222);
+    outline:none;
+    border-bottom: 3px solid #1c0;
+}
+
+.form__input{
+    width:100%;
+    padding: 7px;
+    margin: 6px 0;
+    border:none;
+    border-radius: 8px;
+    border-bottom: 3px solid #1c5;
+    background: transparent;
+    color: #fff;
+}
+
+.form textarea{
+    min-height:140px;
+    resize: none;
+}
+
+.form-img div{
+    padding: 10px;
+}
+
+.form-img{
+    flex: 1;
+    padding: 10px;
+    display:flex;
+    min-width:300px;
+    max-width: 400px;
+    order: 1;
+}
+
+.img-container{
+    /*padding:20px;*/
+    margin:auto;
+    /*border-radius:50%;
+    background: #fff;*/
+}
+
+.img-container div{
+    border-radius: 50%;
+    /*background: #fff;*/
+    text-align: center;
+    padding: 40px;
+}
+
+.form-img img{
+    width:80%;
+    margin:auto;
+}
+
+.form input[type="submit"]{
+    background-color: #1c0 ;
+    border-bottom:none;
+    padding: 10px;
+    cursor:pointer;
+    transition:all 1s;
+    border-radius: 8px;
+}
+
+.form input[type="submit"]:hover{
+    background-color: rgb(13, 134, 2) ;
+}
+
+.form input[type="submit"]:focus{
+    background-color: rgb(14, 168, 0) ;
+}
+
+.form input[type="submit"]:active{
+    background: linear-gradient(to bottom,rgb(13, 134, 2), rgb(14, 168, 0) );
+}
+
+/*stars*/
+
+
+.form .clasificacion{
+    text-align: center;
+    margin: 20px auto;
+    cursor:pointer;
+    width: 210px;
+}
+.form label {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+    cursor: pointer;
+}
+
+label {
+    color: grey;
+}
+
+.clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+    color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+    color: orange;
+}
+
+@media (min-width:1005px){
+    .flex-container{
+        margin: 180px auto;
+    }
+}

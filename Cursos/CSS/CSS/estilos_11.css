@@ -28,6 +28,7 @@ body{
     #ffffff
     3 o 6 , el cuarto parametro es la opacity*/
     box-shadow: 1px 1px 9px 0px white;
+    
 }
 
 /* rgb = red green blue (red,green,blue)/ (255,0,0) solo rojo */
@@ -43,14 +44,15 @@ body{
     height: 98%;
     width: 95%;
     border-radius: 15px;
-
+    z-index: 40000;
+    overflow: hidden;
 }
 
 .nav{
-    background-color: blue;
     border-radius: 15px;
     height: 37px;
     width: 100%;
+    background-color: blue;
 }
 
 /*                                  web site normal                 */
@@ -95,23 +97,80 @@ body{
 /*                                    Responsive Design             */
 
 
-.nav__responsive-button{
-    float: right;
-    padding-right: 5px;
-    padding-top: 5px;
+.nav__responsive-button-container{
+    position:absolute;
+    width:100%;
+    font-size: 25px;
+    background-color: blue;
+    margin-top: -64px;
+    z-index: 3000;
 }
+
+.nav__responsive-button{
+    padding: 6px 20px;
+    text-align: right;
+    width: 100%;
+}
+
 
 .nav__responsive-ul{
     display: block;
-    padding-left: 7px;
-    padding-top: 3px;
     position: absolute;
     width: 100%;
-    background-color: rgb(58, 58, 247);
-    border-radius: 15px;
+    border-radius: 0px;
+    margin-top: 47px;
+    padding-top: 17px;
+    height: 7px;
 }
 
 
+.nav__responsive-li{
+    width: 100%;
+    padding: 5px;
+}
+
+.nav__responsive-li > a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav__responsive-li i{
+    box-sizing: border-box;
+    text-align: center;
+    margin-right: 5px;
+    width: 30px;
+}
+
+.nav__li-container{
+    position: relative;
+    top: -1000px;
+    height: calc(100vh - 64px);
+    background: rgba(255, 255, 255, 0.849);
+    transition: all 1s;
+    width: 60%;
+    padding-top: 27px;
+}
+
+.fondo1, .fondo2, .fondo3, .fondo4{
+    transition: all .5s;
+}
+
+.nav__responsive-ul:hover > .nav__li-container{
+    top:-27px;
+    background:rgba(153, 187, 255, 0.616);
+}
+.fondo1:hover{
+    background: rgba(255, 255, 255, 0.521);
+}
+.fondo2:hover{
+    background: rgba(255, 255, 255, 0.521);
+}
+.fondo3:hover{
+    background: rgba(255, 255, 255, 0.521);
+}
+.fondo4:hover{
+    background: rgba(255, 255, 255, 0.521);
+}
 
 
 
