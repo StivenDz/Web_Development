@@ -13,6 +13,10 @@ eje x horizontal se le llama (main axis) es un shorthand (main-start y main-end 
 
 */
 /*
+---------------------------------------------Propiedades del contenedor flex------------------------------------------------
+ 
+
+
 .flex-container{
     display:flex;
     /*flex-direction:column ;*/
@@ -49,24 +53,41 @@ flex-wrap
 flex-flow {combinacion de flex-direction y flex-wrap}
     colum wrap
 
-justify-content
+
+---------------------------------------------Alineacion en el main-axis-----------------------------------------------------
+
+justify-content   alineacion en el main-axis    eje x
     center
-    space-around
-    space-netween
-    space-evenly
+    space-around : es como un margin auto
+    space-between : hace que las cajas esten eparadas los que mas se pueda
+    space-evenly : cada una tiene el mismo margin
     (main axis)
 
-para el cross axis tenemos las sgtes
+para el cross axis tenemos las sgtes proopiedades:
+
+
+---------------------------------------------Alineacion en el cross-axis-----------------------------------------------------
 
 Align-items
+
     flex-start (se ajusta  la caja flexible a su contenido, si es que no tiene height el container)
-    center
-    flex-end
+    center (se centra verticalmente, o sea en el eje y (cross axis))
+    flex-end (centra los elementos abajo, al bottom 0 de la caja)
     strech (propiedad por defecto/sino tiene height, el mismo se lo agrega hasta lo maximo)
-    baseline
+    baseline (sirve cuando tiene align-content:baseline y ahí siserviria el wrap-reverse)
+
 aling-content
-    para mas de una linea de items que son flex-items
+    para mas de una linea de items que son flex-items, todo esto se aplica para los cotenedores
+
 */
+
+.flex-container0{
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    align-content: baseline;
+    flex-wrap: wrap-reverse;
+}
 
 .flex-item{
     background: #248;
@@ -75,24 +96,40 @@ aling-content
     height: 120px;
     min-width: 120px;
     text-align: center;
+    flex: 1;
     
 }
 
 /*
+
 Propiedades de los items
-    align-self
-    flex-grow
-    flex-shrink
-    flex-basis
+
+    align-self:(flex-start/flex-end/center/strech/baseline) - si le colocamos esta propiedad a una caja
+    es como posicionarla individualmente de las demas
+
+    flex-grow - es la repárticion del espacio sorbante del contenedor
+    (si le damos un flex-grow:1 a un solo item-flex, esa caja se llevaría todo el espacio sobrante del contenedor)
+
+    flex-shrink - decide que espacio va ocupar cada una, cuanto espacio cede cada caja, al ampliarse todas llegan
+    a su max width al mismo tiempo
+
+    flex-basis - es como el width, pero es especial del flex, es mas importante que el width
+
     flex:flex-grow, flex shrink, flex-basis
     order: (como el z-index, pero en el eje en elq ue apunta el ,main axis)
+
+
+    en los flex items, el margin funciona totalmente diferente
+    margin-left:auto - iría al todo de la derecha
+    margin-top:auto - iríra al todo de abajo
+
 */
 
 .orange{
     background:orange;
-    flex-basis: 200px;/*es como un width con prioridad*/
+    flex-basis: 100px;/*es como un width con prioridad*/
     flex-shrink: 2;/*+ceder mas espacio*/
-    flex: 1 0 350px;
+    flex: 2 2 350px;
     order: 4;/*es como un z-index pero en el eje en el que apunte el flex, el que tenga el valor mas grande irá en el final
 
     si tenemos un flex-direction:column; 
@@ -107,7 +144,15 @@ Propiedades de los items
     background:green;
     /*align-self: flex-end;*/
     flex-grow: 1;/*el espacio que sobra se le agraga al tamaño de esta caja*/
+    flex: 2 0 350px;
 }
+
+
+
+
+
+
+
 
 
 /*                     Formulario Flex                 */
@@ -214,7 +259,7 @@ body{
 /*stars*/
 
 
-.form .clasificacion{
+.form .calificacion{
     text-align: center;
     margin: 20px auto;
     cursor:pointer;
