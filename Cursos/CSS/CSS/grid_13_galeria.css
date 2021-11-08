@@ -1,0 +1,9 @@
+*{
+    font-family: 'sen',serif;
+    font-weight: 100;
+}
+
+body{
+    background: radial-gradient(circle,#fff, #bbb);
+    display: flex;
+}
