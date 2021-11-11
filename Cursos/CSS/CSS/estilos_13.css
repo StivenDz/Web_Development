@@ -341,3 +341,46 @@ ul li{
     display: inline-block;
 }
 
+
+
+/*  NOMBRAR GRID LINES  */
+
+
+
+.grid-container3{
+    background: #222;
+    display: grid;
+    grid-template-rows: 
+            [f-line]
+            150px
+            [s-line]
+            150px
+            [t-line]
+            150px;
+    grid-template-rows: 
+            [linea-izquierda]
+            150px
+            150px
+            150px
+            [linea-final];
+
+}
+
+.grid-item2{
+    border: 15px solid #000;
+    background: lightgrey;
+}
+
+.grid-item2:first-child{
+    background: red;
+    grid-row: f-line / t-line;
+    grid-column: 1 /4;
+}
+
+
+/*               SHORT HAND            */
+/*
+    grid-template:  row / columns (grid-container)
+    grid-template: area unidad  
+
+ */
