@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(15, 15, 15);
+}
+
+/* 
+
+                    Animations
+
+
+@KeyFrames
+
+animation-name: name
+animation-duration: duration
+animation-delay: delay
+animation-timing-function: (transition values)
+animation-iteration-count: number || infinite
+
+animation-fill-mode: none | fowards | backwards | both | initial | inherit
+
+animation-direction: normal | reverse | alternate | alternate-reverse
+
+
+*/
+
+.container{
+    background: #86f;
+    padding: 20px 5px;
+}
+
+.caja{
+    background: #025;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    position: relative;
+    animation-name: desplazarse;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.4, 0.99, .38 , .97);
+
+/*  
+    
+    both empieza con la propiedad que le damos en el 0% en el from y forwards no*/
+    /*
+    
+    cubic-bezier = (x,y,x,y)
+    
+*/
+}
+
+@keyframes desplazarse {
+    /*from{
+        position: relative;
+        left: 0;
+    }
+
+    to{
+        left: 80%;
+    }*/
+
+    0%{
+        left: 0;
+        background: #000;
+    }
+
+    50%{
+        background: red;
+    }
+
+    100%{
+        left: 80%;
+        background: green;
+    }
+
+}
+
