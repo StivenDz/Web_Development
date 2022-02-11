@@ -448,4 +448,6 @@ if __name__ == '__main__':
         print('\n \n \n \n \n \n⭐⭐⭐⭐⭐')
         Books(3)
         time.sleep(2)
+
+# falta el (funcion) dibujo de cargando contador o pomodoro, antes de que inicie el conteo
     
