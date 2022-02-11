@@ -1,3 +1,5 @@
+from colorama import Back, Fore, init
+init()
 import os
 import time
 
@@ -16,7 +18,7 @@ import time
 # print(cen)
 
 def CambiarIdioma(idioma):
-    os.system('clear')
+    os.system('cls')
     if idioma == 'ESP':
         print("""\n \n \n \n \n \n \n \n \n \n
                         +------>CONFIGURNDO EL IDIOMA<-------+
@@ -24,14 +26,14 @@ def CambiarIdioma(idioma):
                         |             CARGANDO.              |
                         +------------------------------------+\n \n \n""")
         time.sleep(1)
-        os.system('clear')
+        os.system('cls')
         print("""\n \n \n \n \n \n \n \n \n \n
                         +------>CONFIGURNDO EL IDIOMA<-------+
                         |                                    |
                         |             CARGANDO..             |
                         +------------------------------------+\n \n \n""")
         time.sleep(1)
-        os.system('clear')
+        os.system('cls')
         print("""\n \n \n \n \n \n \n \n \n \n
                         +------>CONFIGURNDO EL IDIOMA<-------+
                         |                                    |
@@ -45,14 +47,14 @@ def CambiarIdioma(idioma):
                         |             LOADING.               |
                         +------------------------------------+\n \n \n""")
         time.sleep(1)
-        os.system('clear')
+        os.system('cls')
         print("""\n \n \n \n \n \n \n \n \n \n
                         +------>SETTING THE LANGUAGE<-------+
                         |                                    |
                         |             LOADING..              |
                         +------------------------------------+\n \n \n""")
         time.sleep(1)
-        os.system('clear')
+        os.system('cls')
         print("""\n \n \n \n \n \n \n \n \n \n
                         +------>SETTING THE LANGUAGE<-------+
                         |                                    |
@@ -60,62 +62,221 @@ def CambiarIdioma(idioma):
                         +------------------------------------+\n \n \n""")
         time.sleep(1)
         
-def Pomodoro():
-    for hora in range(3):
+def Pomodoro(h, idioma):
+    ciclo = 0
+    horasHechas = ['','','','','','']
 
-        decHora = int(hora / 10)
-        UniHora = hora % 10
+    if h == 'predeterminado':
+        for hora in range(2):
 
-        for min in range(60):
+            decHora = int(hora / 10)
+            UniHora = hora % 10
 
-            decMin = int(min / 10)
-            UniMin = min % 10
+            for min in range(60):
 
-            for seg in range(60):
+                decMin = int(min / 10)
+                UniMin = min % 10
 
-                decSeg = int(seg / 10)
-                UniSeg = seg % 10
+                for seg in range(60):
 
-                os.system('clear')
-                print(f'''\n \n \n \n \n \n \n \n \n \n \n \n \n
-                                        {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
-                time.sleep(1)
+                    decSeg = int(seg / 10)
+                    UniSeg = seg % 10
+
+                    os.system('cls')
+                    Books(2)
+                    if (min == 25 or min == 26 or min == 27 or min == 28 or min == 29 or (min == 30 and seg == 0) or min == 55 or min == 56 or min == 57 or min == 58 or min == 59):
+                        print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                        {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
+                        if idioma == 'ESP':
+                            print(Fore.LIGHTBLUE_EX + 'Tiempo de Descanso')
+                        else:
+                            print(Fore.LIGHTBLUE_EX + 'Break Time')
+                        if (min == 30 and seg == 0) or (min == 59 and seg == 59): 
+                            ciclo+=1
+                            if idioma == 'ESP':
+                                print(Fore.GREEN + f'Pomodoro #{ciclo} Completado')
+                                input(Fore.GREEN + 'Presiona enter para continuar... ')
+                            else:
+                                print(Fore.GREEN + f'Pomodoro #{ciclo} Completed')
+                                input(Fore.GREEN + 'Press enter to continue... ')
+                    else:
+                        print(Fore.GREEN + f'''\n \n \n
+                        {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
+
+                    horasHechas[0] = decHora
+                    horasHechas[1] = UniHora
+                    horasHechas[2] = decMin
+                    horasHechas[3] = UniMin
+                    horasHechas[4] = decSeg
+                    horasHechas[5] = UniSeg
+                    time.sleep(1)
+        
+        if idioma == 'ESP':
+            print(Fore.WHITE + '\nTecnica del Pomodoro realizada con exito\nEspero que hayas aprendido mucho!')
+            print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                    Tiempo {horasHechas[0]}{horasHechas[1]}:{horasHechas[2]}{horasHechas[3]}:{horasHechas[4]}{horasHechas[5]}\n \n \n''')
+        else:
+            print(Fore.WHITE + '\nSuccessful Pomodoro Technique\nI hope you have learned a lot!')
+            print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                    Time {horasHechas[0]}{horasHechas[1]}:{horasHechas[2]}{horasHechas[3]}:{horasHechas[4]}{horasHechas[5]}\n \n \n''')
+
+    else:
+        for hora in range(h):
+
+            decHora = int(hora / 10)
+            UniHora = hora % 10
+
+            for min in range(60):
+
+                decMin = int(min / 10)
+                UniMin = min % 10
+
+                for seg in range(60):
+
+                    decSeg = int(seg / 10)
+                    UniSeg = seg % 10
+
+                    os.system('cls')
+                    Books(2)
+                    if (min == 25 or min == 26 or min == 27 or min == 28 or min == 29 or (min == 30 and seg == 0) or min == 55 or min == 56 or min == 57 or min == 58 or min == 59):
+                        print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                        {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
+                        if idioma == 'ESP':
+                            print(Fore.LIGHTBLUE_EX + 'Tiempo de Descanso')
+                        else:
+                            print(Fore.LIGHTBLUE_EX + 'Break Time')
+                        if (min == 30 and seg == 0) or (min == 59 and seg == 59): 
+                            ciclo+=1
+                            if idioma == 'ESP':
+                                print(Fore.GREEN + f'Pomodoro #{ciclo} Completado')
+                                input(Fore.GREEN + 'Presiona enter para continuar... ')
+                            else:
+                                print(Fore.GREEN + f'Pomodoro #{ciclo} Completed')
+                                input(Fore.GREEN + 'Press enter to continue... ')
+                    else:
+                        print(Fore.GREEN + f'''\n \n \n
+                        {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
+                    
+                    horasHechas[0] = decHora
+                    horasHechas[1] = UniHora
+                    horasHechas[2] = decMin
+                    horasHechas[3] = UniMin
+                    horasHechas[4] = decSeg
+                    horasHechas[5] = UniSeg
+                    time.sleep(1)
+        
+        if idioma == 'ESP':
+            print(Fore.WHITE + '\nTecnica del Pomodoro realizada con exito\nEspero que hayas aprendido mucho!')
+            print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                    Tiempo {horasHechas[0]}{horasHechas[1]}:{horasHechas[2]}{horasHechas[3]}:{horasHechas[4]}{horasHechas[5]}\n \n \n''')
+        else:
+            print(Fore.WHITE + '\nSuccessful Pomodoro Technique\nI hope you have learned a lot!')
+            print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                    Time {horasHechas[0]}{horasHechas[1]}:{horasHechas[2]}{horasHechas[3]}:{horasHechas[4]}{horasHechas[5]}\n \n \n''')
+
+def Books(opcion):
+    books = ['''
+    
+              .--.           .---.        .-.
+              |C#|           | N |        |P|
+         .----|--|   .-.     | O |  .---. |Y|    .--.
+      .--|====|==|---|_|--.__| D |--|:::| |T|-==-|==|---.
+      |%%| JS |  |===| |~~|%%| E |--|   |_|H|JAVA|  |___|-.
+      |  |    |  |===| |==|  | J |  |:::|=|O|    |DB|---|=|
+      |  |    |  |   |_|__|  | S |__|   | |N|    |  |___| |
+      |~~|====|--|===|~|~~|%%|~~~|--|:::|=|~|----|==|---|=|
+      ^--^----'--^---^-^--^--^---'--^---^-^-^-==-^--^---^-'
+
+    ''', '''
+    
+
+          __...--~~~~~-._   _.-~~~~~--...__
+        //               `V'               \\ 
+       //                 |                 \\ 
+      //__...--~~~~~~-._  |  _.-~~~~~~--...__\\ 
+     //__.....----~~~~._\ | /_.~~~~----.....__\\
+    ====================\\|//====================
+                        `---`
+    
+    ''','''
+    
+   ____________________________________________________
+  |____________________________________________________|
+  | __     __   ____   ___ ||  ____    ____     _  __  |
+  ||  |__ |--|_| || |_|   |||_|**|*|__|+|+||___| ||  | |
+  ||==|^^||--| |=||=| |=*=||| |~~|~|  |=|=|| | |~||==| |
+  ||  |##||  | | || | |JRO|||-|  | |==|+|+||-|-|~||__| |
+  ||__|__||__|_|_||_|_|___|||_|__|_|__|_|_||_|_|_||__|_|
+  ||_______________________||__________________________|
+  | _____________________  ||      __   __  _  __    _ |
+  ||=|=|=|=|=|=|=|=|=|=|=| __..\/ |  |_|  ||#||==|  / /|
+  || | | | | | | | | | | |/\ \  \\|++|=|  || ||==| / / |
+  ||_|_|_|_|_|_|_|_|_|_|_/_/\_.___\__|_|__||_||__|/_/__|
+  |____________________ /\~()/()~//\ __________________|
+  | __   __    _  _     \_  (_ .  _/ _    ___     _____|
+  ||~~|_|..|__| || |_ _   \ //\\ /  |=|__|~|~|___| | | |
+  ||--|+|^^|==|1||2| | |__/\ __ /\__| |==|x|x|+|+|=|=|=|
+  ||__|_|__|__|_||_|_| /  \ \  / /  \_|__|_|_|_|_|_|_|_|
+  |_________________ _/    \/\/\/    \_ _______________|
+  | _____   _   __  |/      \../      \|  __   __   ___|
+  ||_____|_| |_|##|_||   |   \/ __|   ||_|==|_|++|_|-|||
+  ||______||=|#|--| |\   \   o    /   /| |  |~|  | | |||
+  ||______||_|_|__|_|_\   \  o   /   /_|_|__|_|__|_|_|||
+  |_________ __________\___\____/___/___________ ______|
+  |__    _  /    ________     ______           /| _ _ _|
+  |\ \  |=|/   //    /| //   /  /  / |        / ||%|%|%|
+  | \/\ |*/  .//____//.//   /__/__/ (_)      /  ||=|=|=|
+__|  \/\|/   /(____|/ //                    /  /||~|~|~|__
+  |___\_/   /________//   ________         /  / ||_|_|_|
+  |___ /   (|________/   |\_______\       /  /| |______|
+      /                  \|________)     /  / | |
+    
+    ''']
+
+    if opcion == 1:
+        print(Fore.WHITE + books[0])
+    elif opcion == 2:
+        print(Fore.WHITE + books[1])
+    else:
+        print(Fore.WHITE + books[2])
 
 def MenuESP(leave):
     idioma = 'ESP'
 
     if leave == '':
-        os.system('clear')
-        print("""\n \n \n \n \n \n \n \n \n \n
-                +----------->BIENVENIDO<-------------+
-                |                                    |
-                |1. INICIAR POMODORO PREDETERMINADO  |
-                |2. CONFIGURAR POMODORO              |
-                |3. CAMBIAR IDIOMA                   |
-                |4. ¿QUE ES LA TECNICA POMODORO?     |
-                |0. SALIR                            |
-                +------------------------------------+\n \n \n""")
+        os.system('cls')
+        Books(1)
+        print("""\n \n
+            +----------->BIENVENIDO<-------------+
+            |                                    |
+            |1. INICIAR POMODORO PREDETERMINADO  |
+            |2. CONFIGURAR POMODORO              |
+            |3. CAMBIAR IDIOMA                   |
+            |4. ¿QUE ES LA TECNICA POMODORO?     |
+            |0. SALIR                            |
+            +------------------------------------+\n \n \n""")
         Options(idioma)
 
 def MenuENG(leave):
     idioma = 'ENG'
     
     if leave == '':
-        os.system('clear')
-        print("""\n \n \n \n \n \n \n \n \n \n
-                +------------>WELCOME<---------------+
-                |                                    |
-                |1. START DEFAULT POMODORO           |
-                |2. SET POMODORO                     |
-                |3. CHANGE LANGUAGE                  |
-                |4. WHAT IS POMODORO TECHNIQUE?      |
-                |0. LEAVE                            |
-                +------------------------------------+\n \n \n""")
+        os.system('cls')
+        Books(1)
+        print("""\n \n
+            +------------>WELCOME<---------------+
+            |                                    |
+            |1. START DEFAULT POMODORO           |
+            |2. SET POMODORO                     |
+            |3. CHANGE LANGUAGE                  |
+            |4. WHAT IS POMODORO TECHNIQUE?      |
+            |0. LEAVE                            |
+            +------------------------------------+\n \n \n""")
         Options(idioma)
 
 def definicion(idioma):
     if idioma == 'ESP':
-        os.system('clear')
+        os.system('cls')
         print('''
         La técnica Pomodoro consiste en usar un temporizador para dividir el trabajo en bloques de tiempo enfocados
         (generalmente 25 minutos) separados por un breve descanso, generalmente de cinco minutos.
@@ -146,7 +307,7 @@ def definicion(idioma):
         time.sleep(5)
         input('Presiona Enter Para Volver Al Menu... ')
     else:
-        os.system('clear')
+        os.system('cls')
         print('''
         The Pomodoro technique involves using a timer to break down work into focused blocks of time.
         (usually 25 minutes) separated by a short break, usually five minutes.
@@ -183,15 +344,46 @@ def Options(idioma):
         opcion = int(input("Digite una opción del menu: "))
     else:
         opcion = int(input("Enter a menu option: "))
+        
 
     if opcion == 1 or opcion == 2 or opcion == 3 or opcion == 4 or opcion == 0:
         while True:
             if opcion == 1:
-                Pomodoro()
+                Pomodoro('predeterminado',idioma)
                 break
 
             elif opcion == 2:
-                pass
+                if idioma == 'ESP':
+                    while (True):
+                        try:
+                            horas = int(input(Fore.WHITE + '-Ingrese la cantidad de horas que desea estudiar: '))
+                            while horas < 1 or horas > 6:
+                                if horas < 1:
+                                    print(Fore.RED + '\n-Debes ingresar al menos 1 Hora')
+                                elif horas > 6:
+                                    print(Fore.RED + '\n-Solo puedes Ingresar maximo 6 horas, ya que no es saludable mas de 6 :)')
+                                time.sleep(1)
+                                horas = int(input(Fore.WHITE + '-Ingrese la cantidad de horas que desea estudiar: '))
+                            break
+                        except(ValueError):
+                            print(Fore.RED + '\n-Debes ingresar solo numeros enteros')
+                            time.sleep(1)
+                else:
+                    while (True):
+                        try:
+                            horas = int(input(Fore.WHITE + '-Enter the number of hours you want to study: '))
+                            while horas < 1 or horas > 6:
+                                if horas < 1:
+                                    print(Fore.RED + '\n-You must enter at least 1 Hour')
+                                elif horas > 6:
+                                    print(Fore.RED + '\n-You can only enter a maximum of 6 hours, since this is not healthy for more than 6 :)')
+                                time.sleep(1)
+                                horas = int(input(Fore.WHITE + '-Enter the number of hours you want to study: '))
+                            break
+                        except(ValueError):
+                            print(Fore.RED + '\n-You must enter only whole numbers')
+                            time.sleep(1)
+                Pomodoro(horas,idioma)
                 break
 
             elif opcion == 3:
@@ -206,42 +398,37 @@ def Options(idioma):
             elif opcion == 4:
                 definicion(idioma)
                 if idioma == 'ESP':
-                 MenuESP('')
+                    MenuESP('')
                 else:
                     MenuENG('')
                 break
 
             else:
                 if idioma == 'ESP':
-                    os.system('clear')
+                    os.system('cls')
                     print('\n \n \n \n \n \nMENTENTE PRODUCTIVO⭐')
                     time.sleep(1)
-                    os.system('clear')
+                    os.system('cls')
                     print('\n \n \n \n \n \nMENTENTE PRODUCTIVO⭐⭐')
                     time.sleep(1)
-                    os.system('clear')
+                    os.system('cls')
                     print('\n \n \n \n \n \nMENTENTE PRODUCTIVO⭐⭐⭐')
-                    time.sleep(1)
+                    Books(3)
+                    time.sleep(2)
                     break
     
                 else:
-                    os.system('clear')
+                    os.system('cls')
                     print('\n \n \n \n \n \nSTAY PRODUCTIVE⭐')
                     time.sleep(1)
-                    os.system('clear')
+                    os.system('cls')
                     print('\n \n \n \n \n \nSTAY PRODUCTIVE⭐⭐')
                     time.sleep(1)
-                    os.system('clear')
+                    os.system('cls')
                     print('\n \n \n \n \n \nSTAY PRODUCTIVE⭐⭐⭐')
-                    time.sleep(1)
+                    Books(3)
+                    time.sleep(2)
                     break
-
-        # if opcion != 0:            
-        #     if idioma == 'ESP':
-        #         MenuESP('')
-        #     else:
-        #         MenuENG('')
-            
             
     else:
         if idioma == 'ESP':
@@ -254,4 +441,11 @@ def Options(idioma):
             MenuENG('')
         
 if __name__ == '__main__':
-    MenuESP('')
+    try:
+        MenuESP('')
+    except(KeyboardInterrupt):
+        os.system('cls')
+        print('\n \n \n \n \n \n⭐⭐⭐⭐⭐')
+        Books(3)
+        time.sleep(2)
+    
