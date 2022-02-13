@@ -1,4 +1,4 @@
-from colorama import Back, Fore, init
+from colorama import Fore, init
 init()
 import os
 import time
@@ -61,12 +61,171 @@ def CambiarIdioma(idioma):
                         |             LOADING...             |
                         +------------------------------------+\n \n \n""")
         time.sleep(1)
+
+def cargando(idioma,res):
+    os.system('cls')
+    if idioma == 'ESP':
+        if res == 'predeterminado':
+            print("""\n \n \n \n \n \n \n \n \n \n
+                            +->INICIANDO POMODORO PREDETERMINADO<+
+                            |                                    |
+                            |             CARGANDO.              |
+                            +------------------------------------+\n \n \n""")
+            time.sleep(1)
+            os.system('cls')
+            print("""\n \n \n \n \n \n \n \n \n \n
+                            +->INICIANDO POMODORO PREDETERMINADO<+
+                            |                                    |
+                            |             CARGANDO..             |
+                            +------------------------------------+\n \n \n""")
+            time.sleep(1)
+            os.system('cls')
+            print("""\n \n \n \n \n \n \n \n \n \n
+                            +->INICIANDO POMODORO PREDETERMINADO<+
+                            |                                    |
+                            |             CARGANDO...            |
+                            +------------------------------------+\n \n \n""")
+            time.sleep(1)
+        else:
+            print("""\n \n \n \n \n \n \n \n \n \n
+                            +-->INICIANDO POMODORO CONFIGURADO<--+
+                            |                                    |
+                            |             CARGANDO.              |
+                            +------------------------------------+\n \n \n""")
+            time.sleep(1)
+            os.system('cls')
+            print("""\n \n \n \n \n \n \n \n \n \n
+                            +-->INICIANDO POMODORO CONFIGURADO<--+
+                            |                                    |
+                            |             CARGANDO..             |
+                            +------------------------------------+\n \n \n""")
+            time.sleep(1)
+            os.system('cls')
+            print("""\n \n \n \n \n \n \n \n \n \n
+                            +-->INICIANDO POMODORO CONFIGURADO<--+
+                            |                                    |
+                            |             CARGANDO...            |
+                            +------------------------------------+\n \n \n""")
+            time.sleep(1)
+    else:
+        if res == 'predeterminado':
+            print("""\n \n \n \n \n \n \n \n \n \n
+                            +---->STARTING DEFAULT POMODORO<-----+
+                            |                                    |
+                            |             LOADING.               |
+                            +------------------------------------+\n \n \n""")
+            time.sleep(1)
+            os.system('cls')
+            print("""\n \n \n \n \n \n \n \n \n \n
+                            +---->STARTING DEFAULT POMODORO<-----+
+                            |                                    |
+                            |             LOADING...             |
+                            +------------------------------------+\n \n \n""")
+            time.sleep(1)
+            os.system('cls')
+            print("""\n \n \n \n \n \n \n \n \n \n
+                            +---->STARTING DEFAULT POMODORO<-----+
+                            |                                    |
+                            |             LOADING....            |
+                            +------------------------------------+\n \n \n""")
+            time.sleep(1)
+        else:
+            print("""\n \n \n \n \n \n \n \n \n \n
+                            +--->STARTING CONFIGURED POMODORO<---+
+                            |                                    |
+                            |             LOADING.               |
+                            +------------------------------------+\n \n \n""")
+            time.sleep(1)
+            os.system('cls')
+            print("""\n \n \n \n \n \n \n \n \n \n
+                            +--->STARTING CONFIGURED POMODORO<---+
+                            |                                    |
+                            |             LOADING..              |
+                            +------------------------------------+\n \n \n""")
+            time.sleep(1)
+            os.system('cls')
+            print("""\n \n \n \n \n \n \n \n \n \n
+                            +--->STARTING CONFIGURED POMODORO<---+
+                            |                                    |
+                            |             LOADING...             |
+                            +------------------------------------+\n \n \n""")
+            time.sleep(1)
+
+def CuartoPomodoro(idioma):
+
+    if idioma == 'ESP':
+        print(Fore.GREEN +'Felicidades has completado tu cuarto pomodoro, es hora del descanso\nAhora tendras la posibilidad de digitar cuanto tiempo quieres descansar\nRecuerda que no puede pasar de la hora ni ser menos de un minuto')
+        while True:
+            try:
+                tiempo = int(input(Fore.WHITE + '\nIngresa la cantidad de minutos que deseas descansar: '))
+            
+                while tiempo < 1 or tiempo > 59:
+                    print(Fore.RED + '-Recuerda que no puede pasar de la hora ni ser menos de un minuto por favor...')
+                    tiempo = int(input(Fore.WHITE + '\nIngresa la cantidad de minutos que deseas descansar: '))
+                break
+            except(ValueError):
+                print(Fore.RED + '\n-Solo puedes ingresar valores enteros')
+                time.sleep(1)
+
+        for min in range((tiempo - 1), -1, -1):
+            decMin = int(min / 10)
+            UniMin = min % 10
+
+            for seg in range((60 -1), -1, -1):
+
+                decSeg = int(seg / 10)
+                UniSeg = seg % 10
+
+                os.system('cls')
+                Books(2)
+                print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                    00:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
+                time.sleep(0.001)
+        #input('Presiona enter para continuar... ')
+        return tiempo
         
+        
+    else:
+        print(Fore.GREEN +"Congratulations, you have completed your fourth pomodoro, it's break time\nNow you will have the possibility to enter how long you want to rest\nRemember that it cannot exceed the hour or be less than a minute")
+        while True:
+            try:
+                tiempo = int(input(Fore.WHITE + '\nEnter the number of minutes you want to rest: '))
+
+                while tiempo < 1 or tiempo > 59:
+                    print(Fore.RED + '-Remember that it cannot exceed the hour or be less than a minute, please...')
+                    tiempo = int(input(Fore.WHITE + '\nEnter the number of minutes you want to rest: '))
+                break
+            except(ValueError):
+                print(Fore.RED + '\n-You can only enter integer values')
+                time.sleep(1)
+
+        for min in range((tiempo - 1), -1, -1):
+            decMin = int(min / 10)
+            UniMin = min % 10
+
+            for seg in range((60 -1), -1, -1):
+
+                decSeg = int(seg / 10)
+                UniSeg = seg % 10
+
+                os.system('cls')
+                Books(2)
+                print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                    00:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
+                time.sleep(1)
+        #input('Press enter to continue... ')
+        return tiempo
+    
 def Pomodoro(h, idioma):
     ciclo = 0
     horasHechas = ['','','','','','']
+    cuartoPomdoro = 4
 
     if h == 'predeterminado':
+        if(idioma == 'ESP'):
+            cargando(idioma,'predeterminado')
+        else:
+            cargando(idioma,'predeterminado')
         for hora in range(2):
 
             decHora = int(hora / 10)
@@ -78,6 +237,8 @@ def Pomodoro(h, idioma):
                 UniMin = min % 10
 
                 for seg in range(60):
+                    if ciclo ==4:
+                        break
 
                     decSeg = int(seg / 10)
                     UniSeg = seg % 10
@@ -85,31 +246,50 @@ def Pomodoro(h, idioma):
                     os.system('cls')
                     Books(2)
                     if (min == 25 or min == 26 or min == 27 or min == 28 or min == 29 or (min == 30 and seg == 0) or min == 55 or min == 56 or min == 57 or min == 58 or min == 59):
-                        print(Fore.LIGHTBLUE_EX + f'''\n \n \n
-                        {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
-                        if idioma == 'ESP':
-                            print(Fore.LIGHTBLUE_EX + 'Tiempo de Descanso')
-                        else:
-                            print(Fore.LIGHTBLUE_EX + 'Break Time')
-                        if (min == 30 and seg == 0) or (min == 59 and seg == 59): 
+                        if ((min == 30 and seg == 0) or (min == 55 and seg == 0)):
+                            cuartoPomdoro-= 1
+
+                        if cuartoPomdoro == 0:
+                            print(Fore.LIGHTBLUE_EX + f'''\n \n
+                            {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n''')
+                            descanso = CuartoPomodoro(idioma)
                             ciclo+=1
+                            descanso-= 5
+                            horasHechas[2] = int(descanso / 10)
+                            horasHechas[3] = descanso % 10
+                            cuartoPomdoro = 'listo'
+                            time.sleep(1)
                             if idioma == 'ESP':
                                 print(Fore.GREEN + f'Pomodoro #{ciclo} Completado')
                                 input(Fore.GREEN + 'Presiona enter para continuar... ')
                             else:
                                 print(Fore.GREEN + f'Pomodoro #{ciclo} Completed')
                                 input(Fore.GREEN + 'Press enter to continue... ')
+
+                        elif(cuartoPomdoro == 1 or cuartoPomdoro == 2 or cuartoPomdoro == 3 or cuartoPomdoro == 4):
+                            print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                            {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
+                            if idioma == 'ESP':
+                                print(Fore.LIGHTBLUE_EX + 'Tiempo de Descanso')
+                            else:
+                                print(Fore.LIGHTBLUE_EX + 'Break Time')
+                            if (min == 30 and seg == 0) or (min == 59 and seg == 59): 
+                                ciclo+=1
+                                if idioma == 'ESP':
+                                    print(Fore.GREEN + f'Pomodoro #{ciclo} Completado')
+                                    input(Fore.GREEN + 'Presiona enter para continuar... ')
+                                else:
+                                    print(Fore.GREEN + f'Pomodoro #{ciclo} Completed')
+                                    input(Fore.GREEN + 'Press enter to continue... ')
                     else:
                         print(Fore.GREEN + f'''\n \n \n
                         {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
 
                     horasHechas[0] = decHora
-                    horasHechas[1] = UniHora
-                    horasHechas[2] = decMin
-                    horasHechas[3] = UniMin
-                    horasHechas[4] = decSeg
-                    horasHechas[5] = UniSeg
-                    time.sleep(1)
+                    horasHechas[1] = UniHora + 1
+                    horasHechas[4] = 0
+                    horasHechas[5] = 0
+                    time.sleep(0.000000000)
         
         if idioma == 'ESP':
             print(Fore.WHITE + '\nTecnica del Pomodoro realizada con exito\nEspero que hayas aprendido mucho!')
@@ -121,6 +301,11 @@ def Pomodoro(h, idioma):
                     Time {horasHechas[0]}{horasHechas[1]}:{horasHechas[2]}{horasHechas[3]}:{horasHechas[4]}{horasHechas[5]}\n \n \n''')
 
     else:
+        if(idioma == 'ESP'):
+            cargando(idioma,'configurado')
+        else:
+            cargando(idioma,'configurado')
+
         for hora in range(h):
 
             decHora = int(hora / 10)
@@ -139,20 +324,27 @@ def Pomodoro(h, idioma):
                     os.system('cls')
                     Books(2)
                     if (min == 25 or min == 26 or min == 27 or min == 28 or min == 29 or (min == 30 and seg == 0) or min == 55 or min == 56 or min == 57 or min == 58 or min == 59):
-                        print(Fore.LIGHTBLUE_EX + f'''\n \n \n
-                        {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
-                        if idioma == 'ESP':
-                            print(Fore.LIGHTBLUE_EX + 'Tiempo de Descanso')
+                        if ((min == 30 and seg == 0) or (min == 55 and seg == 0)):
+                            cuartoPomdoro-= 1
+                        if cuartoPomdoro == 0:
+                            CuartoPomodoro(idioma)
+                            cuartoPomdoro = 4
+                            
                         else:
-                            print(Fore.LIGHTBLUE_EX + 'Break Time')
-                        if (min == 30 and seg == 0) or (min == 59 and seg == 59): 
-                            ciclo+=1
+                            print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                            {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
                             if idioma == 'ESP':
-                                print(Fore.GREEN + f'Pomodoro #{ciclo} Completado')
-                                input(Fore.GREEN + 'Presiona enter para continuar... ')
+                                print(Fore.LIGHTBLUE_EX + 'Tiempo de Descanso')
                             else:
-                                print(Fore.GREEN + f'Pomodoro #{ciclo} Completed')
-                                input(Fore.GREEN + 'Press enter to continue... ')
+                                print(Fore.LIGHTBLUE_EX + 'Break Time')
+                            if (min == 30 and seg == 0) or (min == 59 and seg == 59): 
+                                ciclo+=1
+                                if idioma == 'ESP':
+                                    print(Fore.GREEN + f'Pomodoro #{ciclo} Completado')
+                                    input(Fore.GREEN + 'Presiona enter para continuar... ')
+                                else:
+                                    print(Fore.GREEN + f'Pomodoro #{ciclo} Completed')
+                                    input(Fore.GREEN + 'Press enter to continue... ')
                     else:
                         print(Fore.GREEN + f'''\n \n \n
                         {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
@@ -448,6 +640,8 @@ if __name__ == '__main__':
         print('\n \n \n \n \n \n⭐⭐⭐⭐⭐')
         Books(3)
         time.sleep(2)
+        input('... ')
 
-# falta el (funcion) dibujo de cargando contador o pomodoro, antes de que inicie el conteo
-    
+# falta rodar hacia la derecha dos espacios cuando el contador se vuelve azul
+# falta dar la opcion de reiniciar, volver al inicio y salir cuando se acabe el pomodoro
+# falta configurar la opcion 2, para que salga como la uno, tu sabes de que hablo
