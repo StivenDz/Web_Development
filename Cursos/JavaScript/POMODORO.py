@@ -67,88 +67,88 @@ def cargando(idioma,res):
     if idioma == 'ESP':
         if res == 'predeterminado':
             print("""\n \n \n \n \n \n \n \n \n \n
-                            +->INICIANDO POMODORO PREDETERMINADO<+
-                            |                                    |
-                            |             CARGANDO.              |
-                            +------------------------------------+\n \n \n""")
+                    +->INICIANDO POMODORO PREDETERMINADO<+
+                    |                                    |
+                    |             CARGANDO.              |
+                    +------------------------------------+\n \n \n""")
             time.sleep(1)
             os.system('cls')
             print("""\n \n \n \n \n \n \n \n \n \n
-                            +->INICIANDO POMODORO PREDETERMINADO<+
-                            |                                    |
-                            |             CARGANDO..             |
-                            +------------------------------------+\n \n \n""")
+                    +->INICIANDO POMODORO PREDETERMINADO<+
+                    |                                    |
+                    |             CARGANDO..             |
+                    +------------------------------------+\n \n \n""")
             time.sleep(1)
             os.system('cls')
             print("""\n \n \n \n \n \n \n \n \n \n
-                            +->INICIANDO POMODORO PREDETERMINADO<+
-                            |                                    |
-                            |             CARGANDO...            |
-                            +------------------------------------+\n \n \n""")
+                    +->INICIANDO POMODORO PREDETERMINADO<+
+                    |                                    |
+                    |             CARGANDO...            |
+                    +------------------------------------+\n \n \n""")
             time.sleep(1)
         else:
             print("""\n \n \n \n \n \n \n \n \n \n
-                            +-->INICIANDO POMODORO CONFIGURADO<--+
-                            |                                    |
-                            |             CARGANDO.              |
-                            +------------------------------------+\n \n \n""")
+                    +-->INICIANDO POMODORO CONFIGURADO<--+
+                    |                                    |
+                    |             CARGANDO.              |
+                    +------------------------------------+\n \n \n""")
             time.sleep(1)
             os.system('cls')
             print("""\n \n \n \n \n \n \n \n \n \n
-                            +-->INICIANDO POMODORO CONFIGURADO<--+
-                            |                                    |
-                            |             CARGANDO..             |
-                            +------------------------------------+\n \n \n""")
+                    +-->INICIANDO POMODORO CONFIGURADO<--+
+                    |                                    |
+                    |             CARGANDO..             |
+                    +------------------------------------+\n \n \n""")
             time.sleep(1)
             os.system('cls')
             print("""\n \n \n \n \n \n \n \n \n \n
-                            +-->INICIANDO POMODORO CONFIGURADO<--+
-                            |                                    |
-                            |             CARGANDO...            |
-                            +------------------------------------+\n \n \n""")
+                    +-->INICIANDO POMODORO CONFIGURADO<--+
+                    |                                    |
+                    |             CARGANDO...            |
+                    +------------------------------------+\n \n \n""")
             time.sleep(1)
     else:
         if res == 'predeterminado':
             print("""\n \n \n \n \n \n \n \n \n \n
-                            +---->STARTING DEFAULT POMODORO<-----+
-                            |                                    |
-                            |             LOADING.               |
-                            +------------------------------------+\n \n \n""")
+                    +---->STARTING DEFAULT POMODORO<-----+
+                    |                                    |
+                    |             LOADING.               |
+                    +------------------------------------+\n \n \n""")
             time.sleep(1)
             os.system('cls')
             print("""\n \n \n \n \n \n \n \n \n \n
-                            +---->STARTING DEFAULT POMODORO<-----+
-                            |                                    |
-                            |             LOADING...             |
-                            +------------------------------------+\n \n \n""")
+                    +---->STARTING DEFAULT POMODORO<-----+
+                    |                                    |
+                    |             LOADING...             |
+                    +------------------------------------+\n \n \n""")
             time.sleep(1)
             os.system('cls')
             print("""\n \n \n \n \n \n \n \n \n \n
-                            +---->STARTING DEFAULT POMODORO<-----+
-                            |                                    |
-                            |             LOADING....            |
-                            +------------------------------------+\n \n \n""")
+                    +---->STARTING DEFAULT POMODORO<-----+
+                    |                                    |
+                    |             LOADING....            |
+                    +------------------------------------+\n \n \n""")
             time.sleep(1)
         else:
             print("""\n \n \n \n \n \n \n \n \n \n
-                            +--->STARTING CONFIGURED POMODORO<---+
-                            |                                    |
-                            |             LOADING.               |
-                            +------------------------------------+\n \n \n""")
+                    +--->STARTING CONFIGURED POMODORO<---+
+                    |                                    |
+                    |             LOADING.               |
+                    +------------------------------------+\n \n \n""")
             time.sleep(1)
             os.system('cls')
             print("""\n \n \n \n \n \n \n \n \n \n
-                            +--->STARTING CONFIGURED POMODORO<---+
-                            |                                    |
-                            |             LOADING..              |
-                            +------------------------------------+\n \n \n""")
+                    +--->STARTING CONFIGURED POMODORO<---+
+                    |                                    |
+                    |             LOADING..              |
+                    +------------------------------------+\n \n \n""")
             time.sleep(1)
             os.system('cls')
             print("""\n \n \n \n \n \n \n \n \n \n
-                            +--->STARTING CONFIGURED POMODORO<---+
-                            |                                    |
-                            |             LOADING...             |
-                            +------------------------------------+\n \n \n""")
+                    +--->STARTING CONFIGURED POMODORO<---+
+                    |                                    |
+                    |             LOADING...             |
+                    +------------------------------------+\n \n \n""")
             time.sleep(1)
 
 def CuartoPomodoro(idioma):
@@ -217,6 +217,7 @@ def CuartoPomodoro(idioma):
         return tiempo
     
 def Pomodoro(h, idioma):
+    pomodoroCompleted = 0
     ciclo = 0
     horasHechas = ['','','','','','']
     cuartoPomdoro = 4
@@ -226,81 +227,130 @@ def Pomodoro(h, idioma):
             cargando(idioma,'predeterminado')
         else:
             cargando(idioma,'predeterminado')
-        for hora in range(2):
+        salir = False
 
-            decHora = int(hora / 10)
-            UniHora = hora % 10
+        while not salir:  #Para poder dar la opcion de salir, reiniciar o volver al menú
+            for hora in range(1):
 
-            for min in range(60):
+                decHora = int(hora / 10)
+                UniHora = hora % 10
 
-                decMin = int(min / 10)
-                UniMin = min % 10
+                for min in range(60):
 
-                for seg in range(60):
-                    if ciclo ==4:
-                        break
+                    decMin = int(min / 10)
+                    UniMin = min % 10
 
-                    decSeg = int(seg / 10)
-                    UniSeg = seg % 10
+                    for seg in range(60):
+                        if ciclo ==4:
+                            break
 
-                    os.system('cls')
-                    Books(2)
-                    if (min == 25 or min == 26 or min == 27 or min == 28 or min == 29 or (min == 30 and seg == 0) or min == 55 or min == 56 or min == 57 or min == 58 or min == 59):
-                        if ((min == 30 and seg == 0) or (min == 55 and seg == 0)):
-                            cuartoPomdoro-= 1
+                        decSeg = int(seg / 10)
+                        UniSeg = seg % 10
 
-                        if cuartoPomdoro == 0:
-                            print(Fore.LIGHTBLUE_EX + f'''\n \n
-                            {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n''')
-                            descanso = CuartoPomodoro(idioma)
-                            ciclo+=1
-                            descanso-= 5
-                            horasHechas[2] = int(descanso / 10)
-                            horasHechas[3] = descanso % 10
-                            cuartoPomdoro = 'listo'
-                            time.sleep(1)
-                            if idioma == 'ESP':
-                                print(Fore.GREEN + f'Pomodoro #{ciclo} Completado')
-                                input(Fore.GREEN + 'Presiona enter para continuar... ')
-                            else:
-                                print(Fore.GREEN + f'Pomodoro #{ciclo} Completed')
-                                input(Fore.GREEN + 'Press enter to continue... ')
+                        os.system('cls')
+                        Books(2)
+                        if (min == 25 or min == 26 or min == 27 or min == 28 or min == 29 or (min == 30 and seg == 0) or min == 55 or min == 56 or min == 57 or min == 58 or min == 59):
+                            if ((min == 30 and seg == 0) or (min == 55 and seg == 0)):
+                                cuartoPomdoro-= 1
 
-                        elif(cuartoPomdoro == 1 or cuartoPomdoro == 2 or cuartoPomdoro == 3 or cuartoPomdoro == 4):
-                            print(Fore.LIGHTBLUE_EX + f'''\n \n \n
-                            {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
-                            if idioma == 'ESP':
-                                print(Fore.LIGHTBLUE_EX + 'Tiempo de Descanso')
-                            else:
-                                print(Fore.LIGHTBLUE_EX + 'Break Time')
-                            if (min == 30 and seg == 0) or (min == 59 and seg == 59): 
+                            if cuartoPomdoro == 0:
+                                print(Fore.LIGHTBLUE_EX + f'''\n \n
+                        {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n''')
+                                descanso = CuartoPomodoro(idioma)
                                 ciclo+=1
+                                descanso-= 5
+                                horasHechas[2] = int(descanso / 10)
+                                horasHechas[3] = descanso % 10
+                                cuartoPomdoro = 'listo'
+                                time.sleep(1)
                                 if idioma == 'ESP':
                                     print(Fore.GREEN + f'Pomodoro #{ciclo} Completado')
                                     input(Fore.GREEN + 'Presiona enter para continuar... ')
                                 else:
                                     print(Fore.GREEN + f'Pomodoro #{ciclo} Completed')
                                     input(Fore.GREEN + 'Press enter to continue... ')
-                    else:
-                        print(Fore.GREEN + f'''\n \n \n
+
+                            elif(cuartoPomdoro == 1 or cuartoPomdoro == 2 or cuartoPomdoro == 3 or cuartoPomdoro == 4):
+                                print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                        {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
+                                if idioma == 'ESP':
+                                    print(Fore.LIGHTBLUE_EX + 'Tiempo de Descanso')
+                                else:
+                                    print(Fore.LIGHTBLUE_EX + 'Break Time')
+                                if (min == 30 and seg == 0) or (min == 59 and seg == 59): 
+                                    ciclo+=1
+                                    if idioma == 'ESP':
+                                        print(Fore.GREEN + f'Pomodoro #{ciclo} Completado')
+                                        input(Fore.GREEN + 'Presiona enter para continuar... ')
+                                    else:
+                                        print(Fore.GREEN + f'Pomodoro #{ciclo} Completed')
+                                        input(Fore.GREEN + 'Press enter to continue... ')
+                        else:
+                            print(Fore.GREEN + f'''\n \n \n
                         {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
 
-                    horasHechas[0] = decHora
-                    horasHechas[1] = UniHora + 1
-                    horasHechas[4] = 0
-                    horasHechas[5] = 0
-                    time.sleep(0.000000000)
-        
-        if idioma == 'ESP':
-            print(Fore.WHITE + '\nTecnica del Pomodoro realizada con exito\nEspero que hayas aprendido mucho!')
-            print(Fore.LIGHTBLUE_EX + f'''\n \n \n
-                    Tiempo {horasHechas[0]}{horasHechas[1]}:{horasHechas[2]}{horasHechas[3]}:{horasHechas[4]}{horasHechas[5]}\n \n \n''')
-        else:
-            print(Fore.WHITE + '\nSuccessful Pomodoro Technique\nI hope you have learned a lot!')
-            print(Fore.LIGHTBLUE_EX + f'''\n \n \n
-                    Time {horasHechas[0]}{horasHechas[1]}:{horasHechas[2]}{horasHechas[3]}:{horasHechas[4]}{horasHechas[5]}\n \n \n''')
+                        horasHechas[0] = decHora
+                        horasHechas[1] = UniHora + 1
+                        horasHechas[4] = 0
+                        horasHechas[5] = 0
+                        time.sleep(0.000000000)
 
-    else:
+            #end for main
+
+            time.sleep(1)
+            if idioma == 'ESP':
+                print(Fore.WHITE + '\nTecnica del Pomodoro realizada con exito\nEspero que hayas aprendido mucho!')
+                print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                        Tiempo {horasHechas[0]}{horasHechas[1]}:{horasHechas[2]}{horasHechas[3]}:{horasHechas[4]}{horasHechas[5]}\n \n \n''')
+            else:
+                print(Fore.WHITE + '\nSuccessful Pomodoro Technique\nI hope you have learned a lot!')
+                print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                        Time {horasHechas[0]}{horasHechas[1]}:{horasHechas[2]}{horasHechas[3]}:{horasHechas[4]}{horasHechas[5]}\n \n \n''')
+
+            while True:
+                time.sleep(1)
+                if idioma == 'ESP':
+                    print(Fore.WHITE + '\n-Presiona Enter para salir\n-Digita r para reiniciar\n-Digita m para ir al Menú')
+                    desicion = str(input('\n-Digite una opcion: ')).lower()
+                else:
+                    print(Fore.WHITE + '\nPress Enter to exit\nType r to restart\nType m to go to Menu')
+                    desicion = str(input('\n-Type an option: ')).lower()
+                desicion.lower()
+                print(desicion)
+
+                correctDesicion = False
+                while not correctDesicion:
+                    if desicion == '' or desicion == 'r' or desicion == 'm':
+                        if desicion == '':
+                            salir = True
+                            os.system('cls')
+                            print('\n \n \n \n \n \n⭐⭐⭐⭐⭐')
+                            Books(3)
+                            time.sleep(2)
+                            break
+                        elif desicion == 'r':
+                            pomodoroCompleted+= 1
+                            break
+                        else:
+                            salir = True
+                            if idioma == 'ESP':
+                                correctDesicion = True
+                                MenuESP('')
+                                break
+                            else:
+                                correctDesicion = True
+                                MenuENG('')
+                                break
+                    else:
+                        if idioma == 'ESP':
+                            print(Fore.RED + '-Digita una opcion valida')
+                            desicion = str(input(Fore.WHITE + '\n-Digite una opcion: ')).lower()
+                        else:
+                            print(Fore.RED + '-Type a valid option')
+                            desicion = str(input(Fore.WHITE + '\n-Type an option: ')).lower()
+                break
+
+    else: #faltan cosas
         if(idioma == 'ESP'):
             cargando(idioma,'configurado')
         else:
@@ -642,6 +692,6 @@ if __name__ == '__main__':
         time.sleep(2)
         input('... ')
 
-# falta rodar hacia la derecha dos espacios cuando el contador se vuelve azul
+# falta rodar hacia la izquierda dos espacios cuando el contador se vuelve azul
 # falta dar la opcion de reiniciar, volver al inicio y salir cuando se acabe el pomodoro
 # falta configurar la opcion 2, para que salga como la uno, tu sabes de que hablo
