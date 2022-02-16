@@ -434,12 +434,20 @@ def Pomodoro(h, idioma):
             time.sleep(1)
             if idioma == 'ESP':
                 print(Fore.WHITE + '\nTecnica del Pomodoro realizada con exito\nEspero que hayas aprendido mucho!')
-                print(Fore.LIGHTBLUE_EX + f'''\n \n \n
-                               Tiempo {horasHechas[0]}{horasHechas[1]}:{horasHechas[2]}{horasHechas[3]}:{horasHechas[4]}{horasHechas[5]}\n \n \n''')
+                if h == 1:
+                    print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                                Tiempo 01:00:00\n \n \n''')
+                else:
+                    print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                                Tiempo {horasHechas[0]}{horasHechas[1]}:{horasHechas[2]}{horasHechas[3]}:{horasHechas[4]}{horasHechas[5]}\n \n \n''')
             else:
                 print(Fore.WHITE + '\nSuccessful Pomodoro Technique\nI hope you have learned a lot!')
-                print(Fore.LIGHTBLUE_EX + f'''\n \n \n
-                               Time {horasHechas[0]}{horasHechas[1]}:{horasHechas[2]}{horasHechas[3]}:{horasHechas[4]}{horasHechas[5]}\n \n \n''')
+                if h == 1:
+                    print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                                Time 01:00:00\n \n \n''')
+                else:
+                    print(Fore.LIGHTBLUE_EX + f'''\n \n \n
+                                Time {horasHechas[0]}{horasHechas[1]}:{horasHechas[2]}{horasHechas[3]}:{horasHechas[4]}{horasHechas[5]}\n \n \n''')
             while True:
                 time.sleep(1)
                 if idioma == 'ESP':
@@ -493,7 +501,6 @@ def Pomodoro(h, idioma):
                             desicion = str(input(Fore.LIGHTBLUE_EX)).lower()
                 break           
         
-
 def Books(opcion):
     books = ['''
     
