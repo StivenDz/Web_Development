@@ -180,7 +180,7 @@ def CuartoPomodoro(idioma):
                 Books(2)
                 print(Fore.LIGHTBLUE_EX + f'''\n \n \n
                             00:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
-                time.sleep(0.000)
+                time.sleep(1)
         #input('Presiona enter para continuar... ')
         return tiempo
         
@@ -212,7 +212,7 @@ def CuartoPomodoro(idioma):
                 Books(2)
                 print(Fore.LIGHTBLUE_EX + f'''\n \n \n
                                00:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
-                time.sleep(0.00)
+                time.sleep(1)
         #input('Press enter to continue... ')
         return tiempo
     
@@ -241,7 +241,7 @@ def Pomodoro(h, idioma):
                     UniMin = min % 10
 
                     for seg in range(60):
-                        if ciclo ==4:
+                        if ciclo == 4:
                             break
 
                         decSeg = int(seg / 10)
@@ -333,7 +333,7 @@ def Pomodoro(h, idioma):
                             time.sleep(2)
                             break
                         elif desicion == 'r':
-                            pomodoroCompleted+= 1
+                            pomodoroCompleted = 0
                             ciclo = 0
                             cuartoPomdoro = 4
                             break
@@ -390,13 +390,16 @@ def Pomodoro(h, idioma):
                                 
                             if cuartoPomdoro == 0:
                                 print(Fore.LIGHTBLUE_EX + f'''\n \n
-                                {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n''')
+                               {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n''')
                                 descanso = CuartoPomodoro(idioma)
+
+                                pomodoroCompleted += 1
                                 ciclo+=1
                                 descanso-= 5
                                 horasHechas[2] = int(descanso / 10)
                                 horasHechas[3] = descanso % 10
-                                cuartoPomdoro = 'listo'
+                                cuartoPomdoro = 4
+
                                 time.sleep(1)
                                 if idioma == 'ESP':
                                     print(Fore.GREEN + f'Pomodoro #{ciclo} Completado')
@@ -407,7 +410,7 @@ def Pomodoro(h, idioma):
 
                             elif(cuartoPomdoro == 1 or cuartoPomdoro == 2 or cuartoPomdoro == 3 or cuartoPomdoro == 4):
                                 print(Fore.LIGHTBLUE_EX + f'''\n \n \n
-                                {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
+                               {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
                                 if idioma == 'ESP':
                                     print(Fore.LIGHTBLUE_EX + 'Tiempo de Descanso')
                                 else:
@@ -422,13 +425,13 @@ def Pomodoro(h, idioma):
                                         input(Fore.GREEN + 'Press enter to continue... ')
                         else:
                             print(Fore.GREEN + f'''\n \n \n
-                                {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
+                               {decHora}{UniHora}:{decMin}{UniMin}:{decSeg}{UniSeg}\n \n \n''')
 
                         horasHechas[0] = decHora
                         horasHechas[1] = UniHora + 1
                         horasHechas[4] = 0
                         horasHechas[5] = 0
-                        time.sleep(0)
+                        time.sleep(1)
 
             #end for main
             time.sleep(1)
@@ -474,7 +477,7 @@ def Pomodoro(h, idioma):
                             time.sleep(2)
                             break
                         elif desicion == 'r':
-                            pomodoroCompleted+= 1
+                            pomodoroCompleted = 0
                             ciclo = 0
                             cuartoPomdoro = 4
                             break
@@ -783,6 +786,4 @@ if __name__ == '__main__':
         Books(3)
         time.sleep(1)
 
-# falta configurar la opcion 2, para que salga como la uno, tu sabes de que hablo
-# falta mostrar pomodoros realizados en total cuatro ciclos = 1
-# falta configurar cuando el usuario ingrese solo una hora, que muestra el tiempo completo en la lista
+# falta mostrar en la opcion 2 el timpo de descanso en regresiva debajo del timepo normal y cuanto se acabe, que aparezca un input
