@@ -31,3 +31,9 @@
     - Return
     - Parametros
     - Scope
+
+15) ForEach
+
+    - Sintaxis y usos
+    - Ventajas respecto a for
+    - Desventajas (Break, Continue)
