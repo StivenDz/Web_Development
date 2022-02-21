@@ -22,11 +22,11 @@ class Animal{ // Clase
     // solo asi como aparece
 }
 
-let perro = new Animal('Perro', 5 , 'Marron'); // Instanciacion
+const perro = new Animal('Perro', 5 , 'Marron'); // Instanciacion
 // Perro objeto
 
-let gato = new Animal('Gato', 2 , 'blanco');
-let pajaro = new Animal('Pajaro', 7 , 'azul');
+const gato = new Animal('Gato', 2 , 'blanco');
+const pajaro = new Animal('Pajaro', 7 , 'azul');
 
 // console.log(perro);
 // console.log(perro.info)

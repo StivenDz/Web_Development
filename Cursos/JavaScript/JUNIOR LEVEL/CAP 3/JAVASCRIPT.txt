@@ -3,7 +3,7 @@
 
     - Definicion y Usos
     - Ejemplos
-    - Instanciacion
+
 
 16) Conceptos Basicos de POO
     - Clase
@@ -11,19 +11,19 @@
     - Atributo
     - Metodo
     - Constructor
+    - Instanciacion
 
 17) Caracteristicas de la POO
 
     - Abstraccion
     - Modularidad
     - Jerarquia
+    - Encapsulamiento
+    - Polimorfismo
 
 18) Otros Conceptos de POO
 
-    - Polimorfismo
-    - Herencia
-
-19) Otros Conceptos de POO
-
+    - Metodos Estaticos
     - Encapsulamiento
     - Metodos Accesores (Getters, Setters)
+
