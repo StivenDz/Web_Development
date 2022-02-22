@@ -1,0 +1,31 @@
+20) Metodos de Cadenas
+
+    - contact() - Junta dos o mas cadenas y retorna una nueva
+------------------------------------------------------------------
+    - startsWith() - Si una cadena comienza con los caracteres de otra cadena, devuelve true, sino devuelve false
+
+    - endsWith() - Si una cadena termina con los caracteres de otra cadena, devuelve true, sino
+
+    - includes() - Si una cadena puede encontrarse dentro de otra cadena, devuelve true, sino devuelve false
+
+    - indexOf() - Devuelve el indice del primer caractere de la cadena, sino existe, devuelve -1
+
+    - lastIndexOf() - Devuelve el ultimo indice del primer caraceter de la cadena, sino existe, devuelve -1
+------------------------------------------------------------------
+    - padStart() - [Propuesta Estandar] - Rellenaar cadena al principio con los caracteres deaseados
+
+    - padEnd() - [Propuesta de ECMA] - Rellenar cadena al final con los caracteres deseados
+
+    - repeat() - Devuelve la misma cadena pero repetida la cantidad que le indiquemos
+------------------------------------------------------------------
+    - split() - Divide la cadena como le pidamos
+
+    - substring() - Nos retorna un pedazo de la cena que seleccionamos
+
+    - toLoweCase() - Convierte una cadena a minuscula
+
+    - toUpperCase() - Convierte una cadena a mayuscula
+    
+    - toString() - metodo devuelve una cadena que representa al objeto especificado
+
+    - trim() - elimina los espacios en blanco al principio y al final de una cadena
