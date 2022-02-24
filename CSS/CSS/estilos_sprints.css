@@ -1,0 +1,763 @@
+@import url('https://github.githubassets.com/workspace/github/node_modules/@primer/css/marketing/type/typography.scss');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  "Alliance No.1",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+body{
+    font-family:  "Alliance No.1",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    background-color: rgb(20, 20, 20);
+    
+}
+
+header{
+    display: block;
+    width: 100%;
+    height: 750px;
+    background: /*-webkit-linear-gradient(to right, #a439319f, #1d4350a1),*/ url(/CSS/Images/image4.jpg) ;  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, #a439319f, #1d4350a1), url(/CSS/Images/image1.jpg) ; W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-attachment:fixed;
+    position: relative;
+    background-position:initial;
+    background-size: 100%;
+    
+}
+
+header .textos-header{
+    display: inline-block;
+    height: 280px;
+    width: 70%;
+    border:none;
+    padding-left: 50px;
+    padding-top: 60px;
+    justify-content:center;
+    flex-direction:column;
+    color: rgba(160, 194, 194, 0.555);
+    
+
+}
+
+header .textos-header h1{
+    font-family:   "Alliance No.1","Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 50px;
+    line-height:76px;
+    cursor: pointer;
+    
+    
+    
+}
+header .textos-header h2{
+    font-family:  "Alliance No.1",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 35px;
+    line-height:76px;
+    padding-left: 420px;
+    cursor:pointer;
+    
+    
+}
+
+header .textos-header > h2:hover{
+    transform: translate(5%,-3%);
+    transition:all .800s;
+    cursor: pointer;
+    text-shadow: 17px 17px 10px rgb(0, 0, 0);
+}
+
+header .textos-header > h1:hover{
+    transform: translate(5%,-3%);
+    transition:all .800s;
+    cursor: pointer;
+    text-shadow: 17px 17px 10px rgb(0, 0, 0);
+    
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+    color: rgb(135, 175, 175);
+}
+
+nav > a{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+nav > a:hover{
+    text-transform:uppercase;
+    text-shadow: 2px 2px 7px rgb(255, 255, 255);
+}
+
+.wave{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 320px;
+}
+
+.wave >svg{
+    height: 100%;
+    width:100%;
+}
+
+.wave >svg:hover{
+    height: 105%;
+    transition:all .800s;
+}
+
+main{
+    display: block;
+    background-color: rgb(20, 20, 20) ;
+    
+}
+
+.logos{
+    width:30%;
+    margin-top: 100px;
+    margin-left: 70%;
+    bottom:0;
+    
+}
+
+.logo1{
+    display:inline-block;
+    margin: 0px 10px 40px 0px;
+    height: 65px;
+    width:60px;
+    border-radius: 40px;
+}
+
+.logo2{
+    display:inline-block;
+    margin: 0px 7px 0px 0px;
+    height: 55px;
+    width:55px;
+    bottom: 0;
+    border-radius: 10px;
+}
+
+.logo3{
+    display:inline-block;
+    margin: 0px 7px 0px 0px;
+    height: 55px;
+    width:55px;
+    bottom: 0;
+    border-radius: 10px;
+}
+
+.logo4{
+    display:inline-block;
+    margin: 0px 7px 0px 0px;
+    height: 55px;
+    width:60px;
+    border-radius: 10px;
+}
+
+.logo1 >img{
+    padding-top: 0px;
+    height: 60px;
+    width:60px;
+    cursor: pointer;
+}
+
+.logo1:hover{
+    box-shadow:0px 0px 15px 0 rgb(255, 254, 254);
+}
+.logo2:hover{
+    box-shadow:0px 0px 15px 0 rgb(255, 254, 254);
+}
+.logo3:hover{
+    box-shadow:0px 0px 15px 0 rgb(255, 254, 254);
+}
+.logo4:hover{
+    box-shadow:0px 0px 15px 0 rgb(255, 254, 254);
+}
+
+.logo2 >img{
+    height: 62px;
+    width:62px;
+    cursor: pointer;
+}
+
+.logo3 >img{
+    height: 62px;
+    width:62px;
+    cursor: pointer;
+}
+
+.logo4 >img{
+    height:63px;
+    width:66px;
+    cursor: pointer;
+}
+
+
+.contenedor{
+    box-shadow: 6px 6px 6px 0 rgb(255, 254, 254);
+    padding-top: 0px;
+    padding-bottom: 100px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 40px;
+    width: 95%;
+    height: 100%;
+    border-radius: 10px 30px;
+    background: linear-gradient(to right, rgb(50, 50, 50),rgb(5, 5, 5));
+
+}
+.wave2{
+   top: 0;
+   width: 100%;
+   line-height: 200px;
+}
+
+
+.buttons{
+    width: 100%;
+    height: 100%;
+}
+
+.button1{
+    height: 140px;
+    width: 700px;
+    padding-bottom: 15px;
+}
+
+.button2{
+    height: 140px;
+    width: 700px;
+    padding-bottom: 15px;
+}
+
+
+.button3{
+    height: 140px;
+    width: 700px;
+    padding-bottom: 15px;
+}
+
+
+.button4{
+    height: 140px;
+    width: 700px;
+    padding-bottom: 15px;
+}
+
+.button5{
+    height: 140px;
+    width: 700px;
+    padding-bottom: 15px;
+}
+
+.sprint1{
+    
+    box-shadow: 50px 20px 10px 10px rgb(0, 0, 0);
+    border-radius: 10px 20px;
+    padding: 20px 10px;
+    height: 130px;
+    width:500px;
+    margin-top: 100px;
+    margin-left: 10px;
+    color:white;
+    background: url(/CSS/Images/fondo.jpg);
+    background-size: 100%;
+    text-align:justify;
+    text-shadow: 2px 2px 8px #fff;
+    line-height:45px;
+    font-size:larger;
+    border: 4px solid black;
+    cursor: pointer;
+}
+
+.sprint1:hover{
+    transform:translate(5%,3%);
+    transition:all .700s;
+}
+
+.sprint2:hover{
+    transform: translate(-3%,6%);
+    transition:all .700s;
+}
+.sprint3:hover{
+    transform: translate(-3%,6%);
+    transition:all .700s;
+}
+.sprint4:hover{
+    transform: translate(-3%,5%);
+    transition:all .700s;
+}
+.sprint5:hover{
+    transform: translate(-5%,6%);
+    transition:all .700s;
+}
+
+.sprint2{
+    
+    box-shadow: 50px 20px 10px 10px rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 20px 10px;
+    height: 130px;
+    width:500px;
+    margin-top: 100px;
+    margin-left: 450px;
+    color:white;
+    background: url(/CSS/Images/image1.jpg);
+    background-size: 100%;
+    text-align:justify;
+    text-shadow: 2px 2px 8px #fff;
+    line-height:160px;
+    font-size:larger;
+    border: 4px solid black;
+    cursor: pointer;
+}
+.sprint3{
+    box-shadow: 50px 20px 10px 10px rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 20px 10px;
+    height: 130px;
+    width:500px;
+    margin-top: 100px;
+    margin-left: 700px;
+    color:white;
+    background: url(/CSS/Images/image2.jpg);
+    background-size: 100%;
+    text-align:end;
+    text-shadow: 2px 2px 8px #fff;
+    line-height:0px;
+    font-size:larger;
+    border: 4px solid black;
+    cursor: pointer;
+}
+.sprint4{
+    box-shadow:50px 20px 10px 10px rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 20px 10px;
+    height: 130px;
+    width:500px;
+    margin-top: 100px;
+    margin-left: 321px;
+    color:white;
+    background: url(/CSS/Images/image3.jpg);
+    background-size: 100%;
+    text-align:right;
+    text-shadow: 2px 2px 8px #fff;
+    line-height:0px;
+    font-size:larger;
+    border: 4px solid black;
+    cursor: pointer;
+}
+.sprint5{
+    
+    box-shadow: 50px 20px 10px 10px rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 20px 10px;
+    height: 130px;
+    width:500px;
+    margin-top: 100px;
+    margin-left: 20px;
+    color:white;
+    background: url(/CSS/Images/image5.jpg);
+    background-size: 100%;
+    text-align:left;
+    text-shadow: 2px 2px 8px #fff;
+    line-height:180px;
+    font-size:larger;
+    border: 4px solid black;
+    cursor: pointer;
+    
+}
+
+@media screen and (max-width:1347){
+    body{
+        font-family:  "Alliance No.1",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        background-color: rgb(20, 20, 20);
+        
+    }
+    
+    header{
+        display: block;
+        width: 100%;
+        height: 750px;
+        background: /*-webkit-linear-gradient(to right, #a439319f, #1d4350a1),*/ url(/CSS/Images/image4.jpg) ;  /* Chrome 10-25, Safari 5.1-6 */
+        /*background: linear-gradient(to right, #a439319f, #1d4350a1), url(/CSS/Images/image1.jpg) ; W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-attachment:fixed;
+        position: relative;
+        background-position:initial;
+        background-size: 100%;
+        
+    }
+    
+    header .textos-header{
+        display: inline-block;
+        height: 280px;
+        width: 70%;
+        border:none;
+        padding-left: 50px;
+        padding-top: 60px;
+        justify-content:center;
+        flex-direction:column;
+        color: rgba(160, 194, 194, 0.555);
+        
+    
+    }
+    
+    header .textos-header h1{
+        font-family:   "Alliance No.1","Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 50px;
+        line-height:76px;
+        cursor: pointer;
+        
+        
+        
+    }
+    header .textos-header h2{
+        font-family:  "Alliance No.1",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 35px;
+        line-height:76px;
+        padding-left: 420px;
+        cursor:pointer;
+        
+        
+    }
+    
+    header .textos-header > h2:hover{
+        transform: translate(5%,-3%);
+        transition:all .800s;
+        cursor: pointer;
+        text-shadow: 17px 17px 10px rgb(0, 0, 0);
+    }
+    
+    header .textos-header > h1:hover{
+        transform: translate(5%,-3%);
+        transition:all .800s;
+        cursor: pointer;
+        text-shadow: 17px 17px 10px rgb(0, 0, 0);
+        
+    }
+    
+    nav{
+        text-align: right;
+        padding: 30px 50px 0 0;
+        color: rgb(135, 175, 175);
+    }
+    
+    nav > a{
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        text-decoration: none;
+    }
+    
+    nav > a:hover{
+        text-transform:uppercase;
+        text-shadow: 2px 2px 7px rgb(255, 255, 255);
+    }
+    
+    .wave{
+        position:absolute;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+        height: 320px;
+    }
+    
+    .wave >svg{
+        height: 100%;
+        width:100%;
+    }
+    
+    .wave >svg:hover{
+        height: 105%;
+        transition:all .800s;
+    }
+    
+    main{
+        display: block;
+        background-color: rgb(20, 20, 20) ;
+        
+    }
+    
+    .logos{
+        width:30%;
+        margin-top: 100px;
+        margin-left: 70%;
+        bottom:0;
+        
+    }
+    
+    .logo1{
+        display:inline-block;
+        margin: 0px 10px 40px 0px;
+        height: 65px;
+        width:60px;
+        border-radius: 40px;
+    }
+    
+    .logo2{
+        display:inline-block;
+        margin: 0px 7px 0px 0px;
+        height: 55px;
+        width:55px;
+        bottom: 0;
+        border-radius: 10px;
+    }
+    
+    .logo3{
+        display:inline-block;
+        margin: 0px 7px 0px 0px;
+        height: 55px;
+        width:55px;
+        bottom: 0;
+        border-radius: 10px;
+    }
+    
+    .logo4{
+        display:inline-block;
+        margin: 0px 7px 0px 0px;
+        height: 55px;
+        width:60px;
+        border-radius: 10px;
+    }
+    
+    .logo1 >img{
+        padding-top: 0px;
+        height: 60px;
+        width:60px;
+        cursor: pointer;
+    }
+    
+    .logo1:hover{
+        box-shadow:0px 0px 15px 0 rgb(255, 254, 254);
+    }
+    .logo2:hover{
+        box-shadow:0px 0px 15px 0 rgb(255, 254, 254);
+    }
+    .logo3:hover{
+        box-shadow:0px 0px 15px 0 rgb(255, 254, 254);
+    }
+    .logo4:hover{
+        box-shadow:0px 0px 15px 0 rgb(255, 254, 254);
+    }
+    
+    .logo2 >img{
+        height: 62px;
+        width:62px;
+        cursor: pointer;
+    }
+    
+    .logo3 >img{
+        height: 62px;
+        width:62px;
+        cursor: pointer;
+    }
+    
+    .logo4 >img{
+        height:63px;
+        width:66px;
+        cursor: pointer;
+    }
+    
+    
+    .contenedor{
+        padding-top: 0px;
+        padding-bottom: 100px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-right: 15px;
+        margin-left: 40px;
+        width: 95%;
+        height: 100%;
+        border-radius: 20px 30px;
+        background:rgb(0, 0, 0);
+    }
+    .contenedor:hover{
+        box-shadow: 6px 1px 10px 0 rgb(255, 254, 254);
+    }
+    .wave2{
+       top: 0;
+       width: 100%;
+       line-height: 200px;
+    }
+    
+    .buttons{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .button1{
+        height: 140px;
+        width: 700px;
+        padding-bottom: 15px;
+        
+    }
+    
+    .button2{
+        height: 140px;
+        width: 700px;
+        padding-bottom: 15px;
+    }
+    
+    
+    .button3{
+        height: 140px;
+        width: 700px;
+        padding-bottom: 15px;
+    }
+    
+    
+    .button4{
+        height: 140px;
+        width: 700px;
+        padding-bottom: 15px;
+    }
+    
+    .button5{
+        height: 140px;
+        width: 700px;
+        padding-bottom: 15px;
+    }
+    
+    .sprint1{
+        border-radius: 10px 20px;
+        padding: 20px 10px;
+        height: 150px;
+        width:500px;
+        margin-top: 100px;
+        margin-left: 10px;
+        color:white;
+    
+        
+        background: linear-gradient(to left,rgb(0, 0, 0),rgba(5, 5, 5, 0.644)),url(/CSS/Images/fondo.jpg);
+        background-size: 100%;
+        
+    
+    
+        text-align:justify;
+        text-shadow: 2px 2px 8px #fff;
+        line-height:45px;
+        font-size:larger;
+        border: 4px solid black;
+        cursor: pointer;
+    }
+    
+    .sprint1:hover{
+        transform:translate(5%,3%);
+        box-shadow: 50px 20px 10px 10px rgb(17, 17, 17);
+        /*border: 5px solid rgb(25, 25, 25);*/
+        transition:all .700s;
+    }
+    
+    .sprint2:hover{
+        transform: translate(5%,6%);
+        box-shadow: 50px 20px 10px 0px rgb(17, 17, 17);
+        /*border: 5px solid rgb(25, 25, 25);*/
+        transition:all .700s;
+    }
+    .sprint3:hover{
+        transform: translate(4%,6%);
+        box-shadow: 30px 20px 10px 10px rgb(17, 17, 17);
+        /*box-shadow:linear-gradient(to left bottom, #051937, #002435, #092c2e, #24312b, #353633);*/
+        /*border: 5px solid rgb(25, 25, 25);*/
+        transition:all .700s;
+    }
+    .sprint4:hover{
+        transform: translate(8%,5%);
+        box-shadow: 50px 20px 10px 10px rgb(17, 17, 17);
+        /*border: 5px solid rgb(25, 25, 25);*/
+        transition:all .700s;
+    }
+    .sprint5:hover{
+        transform: translate(5%,3%);
+        box-shadow: 50px 20px 10px 10px rgb(17, 17, 17);
+        /*border: 5px solid rgb(25, 25, 25);*/
+        transition:all .700s;
+    }
+    
+    .sprint2{
+        
+        border-radius: 15px;
+        padding: 20px 10px;
+        height: 150px;
+        width:500px;
+        margin-top: 100px;
+        margin-left: 450px;
+        color:rgb(255, 255, 255);
+        background: linear-gradient(to right,rgb(0, 0, 0),rgba(5, 5, 5, 0.219)), url(/CSS/Images/image1.jpg);
+        background-size: 100%;
+        text-align:right;
+        text-shadow: 2px 2px 8px #fff;
+        line-height:160px;
+        font-size:larger;
+        border: 4px solid black;
+        cursor: pointer;
+        font-weight:500;
+    }
+    .sprint3{
+        border-radius: 15px;
+        padding: 20px 10px;
+        height: 150px;
+        width:500px;
+        margin-top: 100px;
+        margin-left: 700px;
+        color:white;
+        background: linear-gradient(to right,rgb(0, 0, 0),rgba(5, 5, 5, 0.219)),url(/CSS/Images/image2.jpg);
+        background-size: 100%;
+        text-align:end;
+        text-shadow: 2px 2px 8px #fff;
+        line-height:0px;
+        font-size:larger;
+        border: 4px solid black;
+        cursor: pointer;
+    }
+    .sprint4{
+        border-radius: 15px;
+        padding: 20px 10px;
+        height: 150px;
+        width:500px;
+        margin-top: 100px;
+        margin-left: 321px;
+        color:white;
+        background: linear-gradient(to right,rgb(0, 0, 0),rgba(5, 5, 5, 0.219)),url(/CSS/Images/image3.jpg);
+        background-size: 100%;
+        text-align:right;
+        text-shadow: 2px 2px 8px #fff;
+        line-height:0px;
+        font-size:larger;
+        border: 4px solid black;
+        cursor: pointer;
+    }
+    .sprint5{
+        border-radius: 15px;
+        padding: 20px 10px;
+        height: 150px;
+        width:500px;
+        margin-top: 100px;
+        margin-left: 20px;
+        color:white;
+        background: linear-gradient(to left,rgb(0, 0, 0),rgba(5, 5, 5, 0.644)),url(/CSS/Images/image5.jpg);
+        background-size: 100%;
+        text-align:left;
+        text-shadow: 2px 2px 8px #fff;
+        line-height:180px;
+        font-size:larger;
+        border: 4px solid black;
+        cursor: pointer;
+        
+    }
+
+
+}    
+
+
+
+/*.sprint{
+    box-shadow: 3px 4px 20px 0 black;
+    border-radius: 15px 40px;
+    height: 100%;
+    width: 900px;
+}*/

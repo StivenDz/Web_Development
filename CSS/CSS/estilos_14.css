@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+}
+
+/*----------------------RESPONSIVE DESIGN---------------  */
+/*
+
+es una tecnica para adaptar todo nuestro contenido en diferentes
+resoluciones
+con cambios, para que pueda verse bien
+para que quede bien en cada dispositivio
+
+
+
+
+Estructuras Flexibles (Contenedores flexibles, imagenes y video flexibles)
+Media Queris (condicionales)
+
+@media
+
+-ancho y alto de la ventana grafica
+-ancho y alto del dispositivo
+-orientacion (la tableta/telefono está en modo horizontal o vertical)
+-resolucion
+
+
+all : apto para todos los dispositivos
+
+print : destinado a material impreso y visualizacion de documentos en una pantalla en el modo de vista previa de impresion
+
+screen : destinado principalmente a las pantallas
+
+spech : destinado a sintetizadores de voz
+
+
+
+Operadores AND | OR
+
+orientacion: landscape(escritorio) y potrait(mobile)
+
+*/
+
+.div-responsive{
+    background: forestgreen;
+    width: 100%;
+}
+/*
+@media screen and (min-width: 600px) and (max-width: 749px){
+    .div-responsive{
+        background: red;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 849px){
+    .div-responsive{
+        background: blue;
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 850px) and (max-width: 949px){
+    .div-responsive{
+        background: yellow;
+        margin-top: 200px;
+    }
+}
+/*
+@media screen and (min-width: 950px) and (max-width: 1000px){
+    /*.div-responsive{
+        background: black;
+        padding: 20px;
+        color: white;
+    }
+}
+
+
+/*  -----------------PRACTICA RESPONSIVE-----------------  */
+
+.content{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header , .main , .aside, .footer{
+    padding: 20px;
+}
+
+.header{
+    background: darkblue;
+    color: black;
+    flex-basis: 60px;
+}
+
+.main{
+    background: purple;
+    color: black;
+    flex-basis: 300px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.aside{
+    background: green;
+    color: black;
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+
+.footer{
+    background: orange;
+    color: black;
+    flex-grow: 1;
+}
+
+@media screen and (min-width: 900px){
+    .content{
+        display: grid;
+        grid-template-rows: 60px 1fr 1fr 1fr 1fr 80px;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .header{
+        grid-column: 1 /span 3;
+    }
+
+    .main{
+        grid-row: 2 / span 4;
+        grid-column: 1 / span 2;
+    }
+
+    .aside{
+        grid-row: 2 / span 4;
+    }
+
+    .footer{
+        grid-row: 6 / 7;
+        grid-column: 1 / span 3;
+    }
+}

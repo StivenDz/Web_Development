@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/CSS/Cp.css">
+    <title>Fromulario De Registro</title>
+</head>
+<body>
+    <div class="container">
+        
+        <h1 class="heading">Registro Para Vacunacion</h1>
+        <strong>COVID-19</strong>
+        <form action="" name="formulario">
+        <div class="box">
+            <p>Name</p>
+            <div>
+                <input type="text" name="user" id="usuario" placeholder="Enter Your Name">
+            </div>
+        </div>
+        
+        <div class="box">
+            
+            <p>Lastname</p>
+            <div>
+                <input type="text" name="lastname" id="lastname" placeholder="Enter Your Lastname">
+            </div>
+        </div>            
+        <div class="box-">
+                <div class="r1">
+                    <input class="radio1" type="radio" name="sexo" id="sexo1"><p class="gender">Male</p>
+                </div>
+
+                <div class="r2">
+                   <input class="radio2" type="radio" name="sexo" id="sexo2"><p class="gender">Female</p>
+                </div>
+        </div>
+        <div class="box">
+            <p>Email</p>
+            <div>
+                <input type="email" name="email" id="email" placeholder="Enter Your Email">
+            </div>
+        </div>
+        <div class="box">
+            <p>Password</p>
+            <div>
+                <input type="password" name="pass" id="pass" placeholder="Enter Your Password">
+            </div>   
+        </div>
+        </form>
+        
+        
+        <p class="conditions"><input class="ch"type="checkbox" name="" id="">Declaro haber leido y acepto las condiciones 
+            generales del programa y la normativa sobre proteccion de datos</p>
+        
+        <div class="button"><input class="submit" type="submit" value="Send" onclick="validar_form()"></div>
+        
+
+    </div>
+</body>
+<script>
+    function validar_form(){
+    let user = document.formulario.usuario;
+    let email = document.formulario.email;
+    let password = document.formulario.pass;
+
+    /*let user_len = user.value.length;
+    if(user_len == 0 || user_len >8){
+        alert("El usuario debe contener max 8 caracteres");
+    }*/
+
+    let formatoCorreo = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    if (!formatoCorreo.test(email.value)){
+        alert("Ingresar correo válido");
+    }
+
+    if (formatoCorreo.test(user.value)){
+        alert("No puedes agragarle datos alfanumericos a tu nombre");
+    }
+
+    let pass_len = password.value.length;
+    if (pass_len == 0 || pass_len < 8){
+        alert("Contraseña debe contener mínimo 8 caracteres");
+
+    }
+}
+</script>
+</html>

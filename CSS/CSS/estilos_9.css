@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+/*                  block                           inline                          inline-block            */
+
+/* display:block;           ocupa todo la linea, y puede tener dimensiones                                  */
+/* display:inline;          se ponen en linea, una al lado de la otra , no se puede modificar las dimensiones,
+                             pero si el contenido, su dimension px depende del contenido */
+/* display:inline-block;    se pone una al lado de la otra y adquiere dimensiones       */
+/*
+.div{
+    width: 250px;
+    height:150px;
+    margin: 20px;
+    border: 10px solid red;
+    background:yellow;
+    display: inline-block;
+}
+
+
+b{
+    width: 250px;
+    height:150px;
+    margin: 10px;
+    border: 10px solid red;
+    background:yellow;
+    display: inline-block;
+    text-align: center;
+}*/
+
+/*                                                     Overflow                                                          */
+/*            overflow: auto   permite añadir un scroll dentro de la caja si es que lo requiere                */
+/*.div-{
+    margin:auto;
+    margin-top: 50px ;
+    margin-bottom: 100px;
+    width:320px;
+    height:350px;
+    border: 4px solid red;
+    background: grey;
+    overflow: auto;
+}*/
+
+/*            overflow-y:          overflow-x:            */
+/*.div-{
+    margin:auto;
+    margin-top: 50px ;
+    margin-bottom: 100px;
+    width:320px;
+    height:350px;
+    border: 4px solid red;
+    background: grey;
+    overflow-x: scroll;
+    overflow-y:hidden;  /*oculto*/
+/*}
+.div--{
+    margin:auto;
+    margin-top: 50px ;
+    margin-bottom: 100px;
+    width:320px;
+    height:350px;
+    border: 4px solid red;
+    background: grey;
+    overflow: hidden;/*   hace que el contenido que este dentro de el se oculte*/
+    
+/*}
+
+img {
+    width: 1000px;
+    position:relative;
+    top: 260px;
+    left: 240px;
+    outline: 2px solid blue;
+    transition: all 1.5s;
+}
+
+.div--:hover > img{
+    width: 1000px;
+    position:relative;
+    top: 0px;
+    left: 0px;
+    outline: 2px solid blue;
+}*/
+
+/*.contenedor div{
+    display: inline-block;
+    float: right;
+}
+
+.primario{
+    background: red;
+    width: 65%;
+}
+.secundario{
+    background: yellow;
+    width: 35%;
+}*/
+
+.cont{
+    margin: auto;
+    margin-top: 50px;
+    border: 4px solid red;
+    background: grey;
+    width: 50%;
+    padding: 20px;
+}
+
+.cont img{
+    height: 400px;
+    width: 400px;
+    float:left;
+    margin-right: 18px;
+    padding: 20px;
+}
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+20) Metodos de Cadenas
+
+    - contact() - Junta dos o mas cadenas y retorna una nueva
+------------------------------------------------------------------
+    - startsWith() - Si una cadena comienza con los caracteres de otra cadena, devuelve true, sino devuelve false
+
+    - endsWith() - Si una cadena termina con los caracteres de otra cadena, devuelve true, sino
+
+    - includes() - Si una cadena puede encontrarse dentro de otra cadena, devuelve true, sino devuelve false
+
+    - indexOf() - Devuelve el indice del primer caractere de la cadena, sino existe, devuelve -1
+
+    - lastIndexOf() - Devuelve el ultimo indice del primer caraceter de la cadena, sino existe, devuelve -1
+------------------------------------------------------------------
+    - padStart() - [Propuesta Estandar] - Rellenaar cadena al principio con los caracteres deaseados
+
+    - padEnd() - [Propuesta de ECMA] - Rellenar cadena al final con los caracteres deseados
+
+    - repeat() - Devuelve la misma cadena pero repetida la cantidad que le indiquemos
+------------------------------------------------------------------
+    - split() - Divide la cadena como le pidamos
+
+    - substring() - Nos retorna un pedazo de la cena que seleccionamos
+
+    - toLoweCase() - Convierte una cadena a minuscula
+
+    - toUpperCase() - Convierte una cadena a mayuscula
+    
+    - toString() - metodo devuelve una cadena que representa al objeto especificado
+
+    - trim() - elimina los espacios en blanco al principio y al final de una cadena
+
+    - trimStart() elimina los espacios del principio
+
+    - trimEnd() elimina los espacios del final
+
+    - valueOf() Retorna el valor primitivo de un objeto string
+
+21) Metodos de Arrays
+
+    ______Transformadores______
+    - pop() - Elimina el ultimo elemento de un array y lo odevuelve
+    - shift() - Elimina el primer elemento de un array y lo odevuelve
+    - push() - Agrega un elemento al array al final de la lista
+    - reverse() - invierte el orden de los elementos de un array
+    - unshift() - agrega uno o mas elementos al inicio del array y devuelve la nueva longitud del mismo
+    - sort() - ordena los elementos de un array lcoalmente y devuelve el arreglo oradenando
+    - splice() - cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos
+
+    ______Accesores______
+    - join() - une todos los elementos de una matriz enuna cadena y la devuelve
+    - slice() - devuelve una parte de el array dentro de un nuevo array, empezando por inicio hasta fin(fin no incliudo) 
+    - Metods ya vistos en cadenas: toString, indexOf, lastIndexOf, incluides
+
+    _______De Repeticion_____
+    - filter() 
+    - forEach() 
+    - map()
