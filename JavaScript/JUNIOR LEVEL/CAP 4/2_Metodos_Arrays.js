@@ -74,4 +74,13 @@ console.log('filter()')
 test.filter(i => console.log(i+'\n'))
 
 console.log('\n\nforEach()')
-test.forEach(i => console.log(i+'\n'))
+test.forEach(function(i){
+    console.log(i+'\n')
+})
+
+console.log('\n\nmap()')
+test.map((i) => console.log(i+'\n'))
+
+console.log('\nfilter()')
+let filterArray = test.filter(i => i.length > 9) // permite hacer lo mismo que un foreach, pero tambien nos permite crear un array con los elementos que cumplan con la condicion
+console.log(filterArray)
