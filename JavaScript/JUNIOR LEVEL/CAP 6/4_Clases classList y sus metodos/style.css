@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grande{
+    font-size: 30px;
+    color: white;
+    font-weight: 900;
+}
+
+.big{
+    letter-spacing: 5px;
+}

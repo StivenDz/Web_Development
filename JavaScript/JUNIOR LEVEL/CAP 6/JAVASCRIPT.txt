@@ -1,0 +1,113 @@
+27) DOM (Document Object Model)
+    - Definición.
+    - Concepto Extendido.
+    - Nodo - Un nodo en el DOM es cualquier etiqueta del cuerpo, como un párrafo, el mismo
+    body o incluso las etiquetas de una lista.
+
+        *Document: el nodo document es el nodo raiz, a partir del cual derivan el resto
+        de nodos.
+        *Element: nodos definidos por etiquetas html.
+
+        *Text: el texto dentro de un nodo element se considera un nuevo nodo hijo de
+        tipo text (texto).
+
+        *Attribute: los atributos de las etiquetas definen nodos, (en Javascript no los
+        veremos como nodos, sino como información asociada al nodo de tipo element)
+        
+        *Comentarios y otros: los comentarios y otros elementos como las declaraciones
+        doctype en cabecera de los documentos HTML generan nodos.
+
+28) Document - Metodos de Selección de elenentos
+
+    - getElementById() - Selecciona un elemento por ID
+
+    - getElementsByTagNane() - Selecciona todos los elementos que coincidan con el noubre de la etiqueta especificada.
+
+    - queryselector() - Devuelve el primer elemento que coincida con el grupo especificado de selectores.
+
+    - queryselectorAl1() - Devuelve todos los elementos que coincidan con el grupo especificado de selectores.
+
+29) Metodos para Definir, obtener y Eliminar atributos.
+    -  setattribute() - Modifica el valor de un atributo
+    -  getattribute() - obtiene el valor de un atributo
+    -  removeattribute() Remueve el valor de un atributo
+
+30) Atributos globales
+    - class - lista de clases del elemento separadas por espacios
+
+    - contenteditable - indica si el elemento puede ser nodificable por el usuario (bool)
+
+    - dir - indica la direccionalidad del texto
+
+    - hidden - indica si el elenento aún no es, o ya no es, relevante.
+
+    - id - define un identificador único.
+
+    - style - Contiene declaraciones de estilo css para ser aplicadas al elenento.
+
+    - tabindex - indica si el elemento puede obtener un focus de input
+
+    - title - Contiene un texto con información relacionada al elemento al que pertenece.
+
+31) Atributos de Inputs
+    - classNane
+    - value
+    - type
+    - ассеpt
+    - form
+    - ninlength
+    - placeholder
+    - required
+
+32) Atributo style
+    - usos y ejenplos
+    - propiedades Camel Case
+
+34) Clases, classList y Metodos de classList
+
+    - Definición y usos
+    - add() - añade una clase
+    - remove() - remueve una clase
+    - item() - devuelve la clase del indice especificado
+    - contains() - verifica si ese elemento posee o no, la clase especificada.
+    - replace() -  reemplaza una clase por otra
+    - toggle() - si no tiene la clase especificada, la agrega, si ya la tiene, la elimina.
+
+36) Obtención y Modificación de Elementos
+    - textcontent - devuelve el texto de cualquier nodo.
+    - innerText - devuelve el texto visible de un node element.
+    - outerTekt - devuelve el texto que de las etiquetas html incluidas las etiquetas.
+    - innerHTML devuelve el contenido html de un elemento
+    - outerHTML - devuelve el codigo HTML completo del elemento
+
+37) Creación de Elementos
+    - createElements()
+    - createDocumentFragment()
+    - createTextNode()
+    - appendchild()
+
+38) obtención y modificación de childs (Hijos)
+    - firstchild
+    - lastchild
+    - firstelementchild
+    - lastelementchild
+    - childNodes
+    - children
+    
+39) Metodos de Childs (Hijos)
+    - replacechild()
+    - removechild( )
+    - haschildNodes()
+
+41) Propiedades de parents (Padres)
+    - parentelement
+    - parentNlode
+
+42) Propiedades de Siblings (Hermanos)
+    - nextsibling
+    - previoussibling
+    - nextElementsibling
+    - previousElementsibling
+
+43) Nodos - Extras
+    - closet()
