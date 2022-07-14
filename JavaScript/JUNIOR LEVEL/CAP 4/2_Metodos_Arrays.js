@@ -1,5 +1,5 @@
-console.log('\n\n\n\n\n\n\n\n\n\n')
-
+//console.log('\n\n\n\n\n\n\n\n\n\n')
+console.clear();
 //              ______Transformadores______
 
 let nombres = ['Jesus', 'Brian', 'Daniel']
@@ -67,6 +67,7 @@ console.log(numeroDes.slice((0),(-2))) // este seleccionaria todos, menos los 2 
 //            _______De Repeticion_____
 
 // filter() forEach()
+console.clear();
 
 let test = ['salud','energia','alimentacion','ejercicio','horas de sueño','productividad']
 

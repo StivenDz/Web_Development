@@ -30,7 +30,7 @@ const saludos = function(nombre){
 
 // funcion flecha
 
-const saludo =()=>{
+const saludo2 =()=>{
     alert(`Hola ${nombre}`)
 }
 

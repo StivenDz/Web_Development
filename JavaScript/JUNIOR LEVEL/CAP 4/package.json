@@ -1,0 +1,18 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "js curso completo",
+  "main": "3_Objeto_Math.js",
+  "scripts": {
+    "start": "nodemon 3_Objeto_Math.js"
+  },
+  "keywords": [
+    "javascript",
+    "js"
+  ],
+  "author": "Stiven Diaz",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.18"
+  }
+}

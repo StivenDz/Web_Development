@@ -11,4 +11,3 @@ document.write('<br>'+parrafo);
 
 parrafo = document.querySelectorAll('#parrafo');
 document.write('<br>'+parrafo[0], parrafo.length);
-

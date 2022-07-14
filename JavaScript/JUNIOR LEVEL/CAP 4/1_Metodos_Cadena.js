@@ -1,5 +1,5 @@
 // contact()
-
+console.clear();
 let cadena = 'Cadena de prueba prueba prueba';
 
 console.log(cadena.concat(' Hola'));
@@ -47,7 +47,7 @@ console.log(cad.concat(' ').repeat(5))
 
 // split()
 
-console.log(cadena.split(' ')) // se divide cada que encuentra un espacio
+console.log(cadena.split(' ')) // se divide cada que encuentra un espacio, o lo que coloquemos entre los parametros y devuelve un array
 
 let resultado = cadena.split(' ')
 console.log(resultado[1])

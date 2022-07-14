@@ -9,12 +9,12 @@
 // }
 
 //                  ____Math____
-
+console.clear();
 // sqrt()
-console.log(Math.sqrt(25))
+console.log(Math.sqrt(25)) // raiz cuadrada
 
 // cbrt()
-console.log(Math.cbrt(27))
+console.log(Math.cbrt(27)) // raiz cubica
 
 // max()
 console.log(Math.max(25,59,21,45,75,321,456,968,321,65465,3213,65461321)) // solo recibe numeros, nada de arrays

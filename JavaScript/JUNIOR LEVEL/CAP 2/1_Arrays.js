@@ -1,3 +1,3 @@
 let frutas = ["Banana","Manzana","Pera"];
 
-document.write(frutas[0]);
+console.log(frutas[0]);

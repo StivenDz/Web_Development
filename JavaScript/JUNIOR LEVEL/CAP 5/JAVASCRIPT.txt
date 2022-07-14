@@ -1,32 +1,32 @@
 26) Console
 _________funciones de registro
 
-- assert() - Aparece un mensaje de error en la consola si la afirmación es falsa. si la afirmación es verdadera, no aparecerá nada. (NO ESTANDAR)
+        - assert() - Aparece un mensaje de error en la consola si la afirmación es falsa. si la afirmación es verdadera, no aparecerá nada. (NO ESTANDAR)
 
- -clear() - limpia la consola
-- error() - Muestra un mensaje de error en la Consola web.
-- info() - Emite un mensaje informativo a la consola Web. En Firefox y Chrome, se muestra un pequeño ícono "i" junto a estos elementos en el registro de la consola Web.
+        - clear() - limpia la consola
+        - error() - Muestra un mensaje de error en la Consola web.
+        - info() - Emite un mensaje informativo a la consola Web. En Firefox y Chrome, se muestra un pequeño ícono "i" junto a estos elementos en el registro de la consola Web.
 
--log() - Muestra un mensaje en la consola neb (o del intérprete Javascript).
+        - log() - Muestra un mensaje en la consola neb (o del intérprete Javascript).
 
--table() - Esta función toma un argumento obligatorio: data, que debe ser un array o un objeto, y un parámetro adicional: columns y nos muestra una tabla en consola
+        - table() - Esta función toma un argumento obligatorio: data, que debe ser un array o un objeto, y un parámetro adicional: columns y nos muestra una tabla en consola
 
-- warn() Imprime un mensaje de advertencia en la consola Web.
+        - warn() Imprime un mensaje de advertencia en la consola Web.
 
-- dir() - Despliega una lista interactiva de las propiedades del objeto Javascript especificado. [NO ESTANDAR]
+        - dir() - Despliega una lista interactiva de las propiedades del objeto Javascript especificado. [NO ESTANDAR]
 
 
 ________funciones de conteo_______
 
-- count() - Registra el número de veces que se 1lama a count(). Esta función toma como argumento opcional una etiqueta.
-- countReset() - Resetea el contador console.count()
-        I
-_____funciones de agrupación.______
-- group() - Crea un nuevo grupo en línea en el registro de la consola web.
-- grupEnd() - Remueve un grupo en linea en el regisitro de la consola web.
-- groupcollapsed() - Crea un grupo en linea pero contraido, el usuario debe expandirlo para verlo.
+        - count() - Registra el número de veces que se 1lama a count(). Esta función toma como argumento opcional una etiqueta.
+        - countReset() - Resetea el contador console.count()
+                I
+        _____funciones de agrupación.______
+        - group() - Crea un nuevo grupo en línea en el registro de la consola web.
+        - grupEnd() - Remueve un grupo en linea en el regisitro de la consola web.
+        - groupcollapsed() - Crea un grupo en linea pero contraido, el usuario debe expandirlo para verlo.
 
-_____funciones de temporización______
-time() - inicia un temporizador.
-timeEnd() - Registra el valor ac tual de un temporizado.
-timelog() - Detiene un temporizador.
+        _____funciones de temporización______
+        time() - inicia un temporizador.
+        timeEnd() - Registra el valor ac tual de un temporizado.
+        timelog() - Detiene un temporizador.
