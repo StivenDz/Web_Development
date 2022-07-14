@@ -1,4 +1,12 @@
+<div align="center">
+  
 # Web Development
-`HTML CSS JAVASCRIPT - Code`
+</div>
 
-<img align="left" alt="Coderhouse" height="400" width="680" src="https://github.com/StivenDz/Web_Development/blob/master/code.png">
+
+<div align="center">
+  
+### `HTML CSS JAVASCRIPT`
+  
+<img align="center" alt="HTML-CSS-JS" height="400" width="680" src="https://github.com/StivenDz/Web_Development/blob/master/code.png">
+</div>
