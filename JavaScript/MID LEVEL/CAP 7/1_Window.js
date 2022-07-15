@@ -17,8 +17,8 @@ let YTURL = 'https://youtube.com';
 // const screen = window.screen;
 
 console.log(screen); //objeto Screen con sus propiedades
-console.log('screenLeft: ',screenLeft);
-console.log('screenTop: ',screenTop); // solo son porpiedades de lectura
+console.log('screenLeft: ', screenLeft);
+console.log('screenTop: ', screenTop); // solo son porpiedades de lectura
 
 const scrollX = window.scrollX;
 console.log(scrollX); // muestra la cantidad de pixeles que nos desplazamos hacia el eje horizontal X
@@ -28,7 +28,7 @@ console.log(scrollY); // muestra la cantidad de pixeles que nos desplazamos haci
 
 window.scrollTo({
     top: 500,
-    behavior:"smooth"
+    behavior: "smooth"
 });
 
 // window.resizeBy(100,200);
@@ -36,8 +36,29 @@ window.scrollTo({
 // window.moveBy(100,200);
 // window.moveTo(100,200);
 
-console.log(window.locationbar.visible); 
-console.log(window.menubar.visible); 
-console.log(window.personalbar.visible); 
-console.log(window.scrollbars.visible); 
-console.log(window.toolbar.visible); 
+console.log(window.locationbar.visible);
+console.log(window.menubar.visible);
+console.log(window.personalbar.visible);
+console.log(window.scrollbars.visible);
+console.log(window.toolbar.visible);
+
+const apiUrl = 'https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2022-04-30&primary_release_date.lte=2022-12-27&api_key=e40f81b55b1ff2e898eaf34b92f0b2ad';
+
+/**
+ * 
+ * @param {string} apiUrl 
+ */
+
+const API = async (apiUrl) => {
+    let data;
+    await fetch(apiUrl, { method: 'GET' })
+        .then(async (res) => {
+            data = await res.json();
+        })
+        .catch(err => console.log(err));
+
+    return data.results;
+}
+
+const data = API(apiUrl);
+console.log(data);

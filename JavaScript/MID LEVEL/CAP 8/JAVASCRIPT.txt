@@ -1,0 +1,54 @@
+45) Herramientas de Desarrollo del navegador (Chrome)
+
+46) pestaña Elements
+    - Filtros Buscar por palabra
+    - Modificar, Crear, Eliminar Etiquetas
+    - Modificar las propiedades de CSS
+    - Event Listeners
+    - Properties
+    - Opciones para copiar
+    - Seguir explorando
+
+47) Pestaña Resources
+    - Ver y Guardar archivos
+    - Informacion Ofrecida
+    - Cambios en tiempo real
+    - Snippets - Ejecutar codigo por fragmentos
+
+48) Pestaña Networks
+    - Interfaz
+    - Sort By y filtros de busqueda
+    - limpiar Cookies y caché
+    - Importar y exportar
+
+49) Pestaña TimeLine / Perfomance
+    - Uso y grabacion
+    - ScreenShots de la grabacion
+    - Controls
+    - Overview (FPS, CPU y Net)
+    - Flame Chart
+    - Details
+    - Sugerencias de grabacion
+
+50) Pestaña Application
+    - Application
+    - Storage
+    - Caché
+    - Background Services
+    - Frames
+
+51) Pestaña console
+
+    - Funcionamiento
+    - Apilamiento de mensajes
+    - Show timestamps
+    - borrar el historial
+    - Conservar el historial
+    - Eleccion del contexto de ejecucion
+    - Filtrado de los resultados de console
+    - Filtros por nivel de gravedad
+        Warnings
+        Info
+        Error
+        Logs
+        Debug
